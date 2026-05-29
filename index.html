@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8"><title>Cat&aacute;logo ML &mdash; Anchieta Pe&ccedil;as</title>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Cat&aacute;logo Mercado Livre &mdash; Anchieta Pe&ccedil;as</title>
+<meta name="description" content="Cat&aacute;logo de 831 pe&ccedil;as Anchieta para o Mercado Livre">
+<meta property="og:title" content="Anchieta Pe&ccedil;as &mdash; Cat&aacute;logo ML">
+<meta property="og:description" content="831 produtos &middot; Fonte BR Company &middot; Pronto para homologa&ccedil;&atilde;o">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<meta property="og:url" content="https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/index.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 * { box-sizing: border-box; }
 body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
@@ -32,6 +40,29 @@ header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
 .sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
 .card.placeholder .sku { color: #b45309; font-weight: 600; }
 
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
 /* Pagina individual SKU */
 .detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
 .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
@@ -46,8 +77,24 @@ header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
 .back:hover { text-decoration: underline; }
 @media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
 </style></head><body>
-<header><h1>Anchieta Pe&ccedil;as &middot; Cat&aacute;logo Mercado Livre</h1>
-<div class="meta">Fonte 61 (BR Company) &middot; C&oacute;digos 000001..001000 &middot; Gerado em 29/05/2026 08:51</div></header>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Anchieta Pe&ccedil;as &middot; Cat&aacute;logo Mercado Livre</h1>
+    <div class="meta">Fonte 61 (BR Company) &middot; C&oacute;digos 000001..001000 &middot; Gerado em 29/05/2026 08:55</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Catálogo Mercado Livre
+831 produtos · Fonte BR Company
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/index.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Catalogo Anchieta ML&body=Anchieta Peças - Catálogo Mercado Livre
+831 produtos · Fonte BR Company
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/index.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
 <div class="toolbar">
 <input type="search" id="q" placeholder="Buscar por c&oacute;digo, SKU, t&iacute;tulo, marca ou n&ordm; pe&ccedil;a...">
 <button id="f-todos" class="active">Todos (831)</button>
@@ -7535,7 +7582,38 @@ header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
 <div class="marca">GENUINE PARTS</div>
 <div class="sku">AP0011816-0061</div>
 </div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
 <script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
 const inp = document.getElementById('q');
 const cards = document.querySelectorAll('.card');
 const stat = document.getElementById('stat');
