@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Bloco 517001-518000 | Anchieta Pe&ccedil;as ML</title>
+<meta property="og:title" content="Bloco 517001-518000 &middot; Anchieta Pe&ccedil;as">
+<meta property="og:description" content="136 produtos da Fonte BR Company">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #003366; color: white; padding: 1rem 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
+.toolbar { background: white; padding: .75rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar input { padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: .9rem; min-width: 240px; }
+.toolbar .stat { font-size: .85rem; color: #6b7280; }
+.toolbar button { padding: .5rem .85rem; border: 1px solid #d1d5db; border-radius: 6px; background: white; cursor: pointer; font-size: .85rem; transition: all .15s; }
+.toolbar button:hover { background: #f3f4f6; }
+.toolbar button.active { background: #003366; color: white; border-color: #003366; }
+.toolbar button.warn { border-color: #f59e0b; color: #b45309; }
+.toolbar button.warn.active { background: #f59e0b; color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); overflow: hidden; transition: transform .15s, box-shadow .15s; position: relative; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card a { color: inherit; text-decoration: none; display: block; }
+.card.placeholder { border: 2px solid #f59e0b; }
+.card .badge-placeholder { position: absolute; top: 8px; right: 8px; background: #f59e0b; color: white; font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+.thumb { width: 100%; height: 180px; background: #f3f4f6 center / contain no-repeat; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: .8rem; }
+.thumb.placeholder-bg { opacity: .55; filter: grayscale(.4); }
+.no-img { background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px); }
+.body { padding: .75rem; }
+.cod { font-family: monospace; background: #003366; color: white; font-size: .75rem; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.card.placeholder .cod { background: #f59e0b; font-size: 1rem; padding: 5px 10px; font-weight: 700; letter-spacing: .04em; }
+.preco { color: #10b981; font-weight: 600; font-size: 1.05rem; margin: .25rem 0; }
+.titulo { font-size: .85rem; line-height: 1.3; margin: .25rem 0; min-height: 2.4em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.marca { color: #6b7280; font-size: .75rem; }
+.sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
+.card.placeholder .sku { color: #b45309; font-weight: 600; }
+
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
+/* Pagina individual SKU */
+.detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.detail-grid .photos img { width: 100%; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e5e7eb; }
+.detail h2 { margin-top: 0; }
+.detail .preco-big { font-size: 2rem; color: #10b981; font-weight: 700; margin: 1rem 0; }
+.detail .field { margin-bottom: .75rem; }
+.detail .field label { font-size: .8rem; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+.detail .field .val { font-size: .95rem; margin-top: .15rem; }
+.detail pre.desc { background: #f9fafb; padding: 1rem; border-radius: 6px; white-space: pre-wrap; font-family: inherit; font-size: .9rem; line-height: 1.5; border-left: 3px solid #003366; }
+.back { display: inline-block; margin-bottom: 1rem; color: #003366; text-decoration: none; font-size: .9rem; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+</style></head><body>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Bloco 517001-518000 &middot; Anchieta Pe&ccedil;as</h1>
+    <div class="meta"><a href="../index.html" style="color:#cbd5e1;">&larr; voltar ao &iacute;ndice</a> &middot; 136 produtos &middot; 0 com foto real &middot; 136 gen&eacute;ricas</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Bloco 517001-518000
+136 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/517001-518000.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Anchieta bloco 517001&body=Anchieta Peças - Bloco 517001-518000
+136 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/517001-518000.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
+<div class="toolbar">
+<input type="search" id="q" placeholder="Buscar neste bloco...">
+<button id="f-todos" class="active">Todos (136)</button>
+<button id="f-reais">Com foto real (0)</button>
+<button id="f-place" class="warn">S&oacute; gen&eacute;ricas (136)</button>
+<div class="stat" id="stat">136 / 136 itens</div>
+</div>
+<div class="grid">
+<div class="card placeholder" data-search="517007 ap0005399-0061 mangueira intercooler(1 ano garantia) genuine parts genuine parts 504136611">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517007.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517007</span>
+<div class="preco">R$ 436,60</div>
+<div class="titulo">MANGUEIRA INTERCOOLER(1 ANO GARANTIA) GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005399-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517012 ap0016629-0061 rolamento diferencial pinhao f19035/bc1b ford pesado genuine parts te3525221">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517012.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517012</span>
+<div class="preco">R$ 541,70</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL PINHAO F19035/BC1B FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016629-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517017 ap0016698-0061 mangueira carcaca termostato scania genuine parts 1857018 genuine parts 1857018">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517017.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517017</span>
+<div class="preco">R$ 60,19</div>
+<div class="titulo">MANGUEIRA CARCACA TERMOSTATO SCANIA GENUINE PARTS 1857018</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016698-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517023 ap0019821-0061 mangueira compressor ar ao bloco mb pesado genuine parts genuine parts 3521870082">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517023.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517023</span>
+<div class="preco">R$ 61,02</div>
+<div class="titulo">MANGUEIRA COMPRESSOR AR AO BLOCO MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019821-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517039 ap0002675-0061 mangueira inferior radiador mb pesado genuine parts genuine parts 6885011982">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517039.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517039</span>
+<div class="preco">R$ 931,15</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002675-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517044 ap0022772-0061 rolamento eixo piloto cxa cambio f19008/ mb pesado genuine parts 0079811801">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517044.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517044</span>
+<div class="preco">R$ 1.612,91</div>
+<div class="titulo">ROLAMENTO EIXO PILOTO CXA CAMBIO F19008/ MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022772-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517055 ap0019334-0061 mangueira compressor scania genuine parts 1677665 genuine parts 1677665">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517055.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517055</span>
+<div class="preco">R$ 44,22</div>
+<div class="titulo">MANGUEIRA COMPRESSOR SCANIA GENUINE PARTS 1677665</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019334-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517060 ap0009960-0061 rolamento cubo dianteiro jf6049/jf6010/v volvo genuine parts genuine parts 1614801">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517060.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517060</span>
+<div class="preco">R$ 880,27</div>
+<div class="titulo">ROLAMENTO CUBO DIANTEIRO JF6049/JF6010/V VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009960-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517071 ap0015689-0061 mangueira radiador scania genuine parts 278474 genuine parts 278474">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517071.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517071</span>
+<div class="preco">R$ 155,33</div>
+<div class="titulo">MANGUEIRA RADIADOR SCANIA GENUINE PARTS 278474</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015689-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517073 ap0016395-0061 porca roda m20x1,5/alt.20/ch 30mm genuine parts 517073 genuine parts 517073">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517073.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517073</span>
+<div class="preco">R$ 10,03</div>
+<div class="titulo">PORCA RODA M20X1,5/ALT.20/CH 30MM GENUINE PARTS 517073</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016395-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517076 ap0010989-0061 rolamento manga eixo 31308f/31308a/t7fb0 volvo genuine parts genuine parts 6782631">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517076.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517076</span>
+<div class="preco">R$ 436,57</div>
+<div class="titulo">ROLAMENTO MANGA EIXO 31308F/31308A/T7FB0 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010989-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517087 ap7259253-0061 mangueira radiador ao termostato mb 2423 1718 1730 2430 mb-o mb-o 9735010982">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517087.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517087</span>
+<div class="preco">R$ 476,22</div>
+<div class="titulo">MANGUEIRA RADIADOR AO TERMOSTATO MB 2423 1718 1730 2430 MB-O</div>
+<div class="marca">MB-O</div>
+<div class="sku">AP7259253-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517089 ap0020493-0061 parafuso allen m12x30x1,75 8.8 rt scania genuine parts genuine parts 809845">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517089.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517089</span>
+<div class="preco">R$ 3,31</div>
+<div class="titulo">PARAFUSO ALLEN M12X30X1,75 8.8 RT SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020493-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517092 ap0022773-0061 rolamento eixo secundario traseiro 39580 scania 284997 genuine parts 284997">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517092.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517092</span>
+<div class="preco">R$ 688,92</div>
+<div class="titulo">ROLAMENTO EIXO SECUNDARIO TRASEIRO 39580 SCANIA 284997</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022773-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517103 ap0015292-0061 mangueira reservatorio direcao hidraulica vw pesado genuine parts tag145743">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517103.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517103</span>
+<div class="preco">R$ 76,50</div>
+<div class="titulo">MANGUEIRA RESERVATORIO DIRECAO HIDRAULICA VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015292-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517108 ap0022774-0061 rolamento ponta entalhado f19019/512533/ mb pesado genuine parts 0019813001">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517108.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517108</span>
+<div class="preco">R$ 500,77</div>
+<div class="titulo">ROLAMENTO PONTA ENTALHADO F19019/512533/ MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022774-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517119 ap0020354-0061 mangueira radiador compressor scania genuine parts 309178 genuine parts 309178">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517119.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517119</span>
+<div class="preco">R$ 25,29</div>
+<div class="titulo">MANGUEIRA RADIADOR COMPRESSOR SCANIA GENUINE PARTS 309178</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020354-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517124 ap0008301-0061 rolamento diferencial pinhao 40x90x25 mm ford pesado genuine parts bc1b322201b">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517124.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517124</span>
+<div class="preco">R$ 782,56</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL PINHAO 40X90X25 MM FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008301-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517135 ap0014704-0061 mangueira inferior radiador vw pesado genuine parts genuine parts 2sr121073a">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517135.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517135</span>
+<div class="preco">R$ 968,63</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014704-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517136 ap0016348-0061 parafuso sextavado c/ flange  m8x30x1,25 10.9 rt scania genuine parts 812519">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517136.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517136</span>
+<div class="preco">R$ 1,96</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M8X30X1,25 10.9 RT SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016348-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517151 ap0014442-0061 mangueira ret.compressor cummins serie b ford pesado genuine parts bg3x6418aa">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517151.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517151</span>
+<div class="preco">R$ 104,79</div>
+<div class="titulo">MANGUEIRA RET.COMPRESSOR CUMMINS SERIE B FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014442-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517152 ap0022775-0061 parafuso sextavado m6x12x1,00 8.8 rt 933 scania 812501 genuine parts 812501">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517152.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517152</span>
+<div class="preco">R$ 0,34</div>
+<div class="titulo">PARAFUSO SEXTAVADO M6X12X1,00 8.8 RT 933 SCANIA 812501</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022775-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517156 ap0022776-0061 rolamento eixo primario superior 33210f/ mb pesado genuine parts 0039818305">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517156.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517156</span>
+<div class="preco">R$ 237,09</div>
+<div class="titulo">ROLAMENTO EIXO PRIMARIO SUPERIOR 33210F/ MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022776-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517168 ap0008247-0061 parafuso sextavado c/ flange m14x150x1,5 10.9 rp mb pesado genuine parts 000000005523">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517168.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517168</span>
+<div class="preco">R$ 42,26</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE M14X150X1,5 10.9 RP MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008247-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517183 ap0011623-0061 mangueira inferior radiador c/mola ford pesado genuine parts genuine parts 96hu8286ba">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517183.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517183</span>
+<div class="preco">R$ 656,89</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR C/MOLA FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011623-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517184 ap0015798-0061 parafuso sextavado m20x130x1,5 10.9 rp/br517895 517184 genuine parts 517184">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517184.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517184</span>
+<div class="preco">R$ 33,99</div>
+<div class="titulo">PARAFUSO SEXTAVADO M20X130X1,5 10.9 RP/BR517895 517184</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015798-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517188 ap0012112-0061 rolamento roda k598a/k593x mb pesado genuine parts genuine parts 0039811405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517188.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517188</span>
+<div class="preco">R$ 337,06</div>
+<div class="titulo">ROLAMENTO RODA K598A/K593X MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012112-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517199 ap0005626-0061 mangueira carcaca termostato scania genuine parts 1778325 genuine parts 1778325">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517199.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517199</span>
+<div class="preco">R$ 244,33</div>
+<div class="titulo">MANGUEIRA CARCACA TERMOSTATO SCANIA GENUINE PARTS 1778325</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005626-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517204 ap0006769-0061 rolamento agulha(roletes)pino manga ver mb pesado 0089816810 genuine parts 0089816810">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517204.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517204</span>
+<div class="preco">R$ 52,00</div>
+<div class="titulo">ROLAMENTO AGULHA(ROLETES)PINO MANGA VER MB PESADO 0089816810</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006769-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517215 ap0009160-0061 mangueira saida radiador bomba agua br 50214 mb pesado genuine parts 6935017582">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517215.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517215</span>
+<div class="preco">R$ 1.073,52</div>
+<div class="titulo">MANGUEIRA SAIDA RADIADOR BOMBA AGUA BR 50214 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009160-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517220 ap0006822-0061 mancal embreagem c/rolamento 1ªlinha mb pesado genuine parts genuine parts 0022508315">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517220.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517220</span>
+<div class="preco">R$ 1.011,27</div>
+<div class="titulo">MANCAL EMBREAGEM C/ROLAMENTO 1ªLINHA MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006822-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517231 ap0014510-0061 mangueira retarder scania genuine parts 1904564 genuine parts 1904564">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517231.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517231</span>
+<div class="preco">R$ 141,84</div>
+<div class="titulo">MANGUEIRA RETARDER SCANIA GENUINE PARTS 1904564</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014510-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517236 ap1821519-0061 rolamento rolete pil.c/flange f45809/315070 nylon mb pesado genuine parts 3459818101">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517236.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517236</span>
+<div class="preco">R$ 476,25</div>
+<div class="titulo">ROLAMENTO ROLETE PIL.C/FLANGE F45809/315070 NYLON MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP1821519-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517247 ap0022777-0061 mangueira enchimento radiador vw pesado genuine parts genuine parts 2vd121101">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517247.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517247</span>
+<div class="preco">R$ 196,19</div>
+<div class="titulo">MANGUEIRA ENCHIMENTO RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022777-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517252 ap2895625-0726 rolamento gaiola do entalhado (bronze) cambios mb g3/36 pesaro mb 3459817012">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517252.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517252</span>
+<div class="preco">R$ 173,77</div>
+<div class="titulo">ROLAMENTO GAIOLA DO ENTALHADO (BRONZE) CAMBIOS MB G3/36</div>
+<div class="marca">PESARO MB</div>
+<div class="sku">AP2895625-0726</div>
+</div></a></div>
+<div class="card placeholder" data-search="517263 ap0001513-0061 mangueira inferior radiador vw pesado genuine parts genuine parts 2p0121051b">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517263.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517263</span>
+<div class="preco">R$ 595,70</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001513-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517268 ap0022778-0061 rolamento trambulador hk2520/f33791/br50 mb pesado genuine parts 0059813110">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517268.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517268</span>
+<div class="preco">R$ 29,68</div>
+<div class="titulo">ROLAMENTO TRAMBULADOR HK2520/F33791/BR50 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022778-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517279 ap0003372-0061 mangueira intercooler maior borracha br7302 mb sprinter genuine parts 9015284782">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517279.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517279</span>
+<div class="preco">R$ 583,44</div>
+<div class="titulo">MANGUEIRA INTERCOOLER MAIOR BORRACHA BR7302 MB SPRINTER</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003372-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517280 ap0022779-0061 parafuso sextavado c/arruela m10x45x1,5 8.8 rt genuine parts genuine parts 517280">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517280.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517280</span>
+<div class="preco">R$ 2,94</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ARRUELA M10X45X1,5 8.8 RT GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022779-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517284 ap0016033-0061 rolamento cambio eixo entalhado 45x100x2 mb pesado genuine parts 3449817001">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517284.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517284</span>
+<div class="preco">R$ 331,74</div>
+<div class="titulo">ROLAMENTO CAMBIO EIXO ENTALHADO 45X100X2 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016033-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517295 ap0006504-0061 mangueira arrefec.compr.16x23x70mm br509 scania 1778294 genuine parts 1778294">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517295.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517295</span>
+<div class="preco">R$ 38,66</div>
+<div class="titulo">MANGUEIRA ARREFEC.COMPR.16X23X70MM BR509 SCANIA 1778294</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006504-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517311 ap0018859-0061 mangueira radiador a carcaca termostatic scania 1888095 genuine parts 1888095">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517311.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517311</span>
+<div class="preco">R$ 244,01</div>
+<div class="titulo">MANGUEIRA RADIADOR A CARCACA TERMOSTATIC SCANIA 1888095</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018859-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517312 ap0019575-0061 parafuso tork m8x20x1,25 rt mb pesado genuine parts genuine parts 0009849542">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517312.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517312</span>
+<div class="preco">R$ 1,58</div>
+<div class="titulo">PARAFUSO TORK M8X20X1,25 RT MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019575-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517316 ap0016075-0061 rolamento eixo interm.40x90x25,25 (30308 mb pesado genuine parts 0019813105">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517316.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517316</span>
+<div class="preco">R$ 122,25</div>
+<div class="titulo">ROLAMENTO EIXO INTERM.40X90X25,25 (30308 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016075-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517327 ap7090379-0786 mangueira sanfonada filtro de ar mb 1718 2423 1418 2425 3030 reserplastic mb 9585280291">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517327.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517327</span>
+<div class="preco">R$ 349,10</div>
+<div class="titulo">MANGUEIRA SANFONADA FILTRO DE AR MB 1718 2423 1418 2425 3030</div>
+<div class="marca">RESERPLASTIC MB</div>
+<div class="sku">AP7090379-0786</div>
+</div></a></div>
+<div class="card placeholder" data-search="517332 ap0014408-0061 rolamento eixo prim.entalhado nu209 aco mb pesado 3449817101 genuine parts 3449817101">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517332.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517332</span>
+<div class="preco">R$ 171,11</div>
+<div class="titulo">ROLAMENTO EIXO PRIM.ENTALHADO NU209 ACO MB PESADO 3449817101</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014408-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517343 ap0006014-0061 tubo bomba agua volvo genuine parts 20440375 genuine parts 20440375">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517343.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517343</span>
+<div class="preco">R$ 1.012,58</div>
+<div class="titulo">TUBO BOMBA AGUA VOLVO GENUINE PARTS 20440375</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006014-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517344 ap0013438-0061 parafuso sextavado m20x150x1,5 10.9 rp genuine parts 517344 genuine parts 517344">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517344.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517344</span>
+<div class="preco">R$ 37,93</div>
+<div class="titulo">PARAFUSO SEXTAVADO M20X150X1,5 10.9 RP GENUINE PARTS 517344</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013438-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517348 ap0022780-0061 rolamento diferencial pinhao 61,91x146,0 scania 264700 genuine parts 264700">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517348.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517348</span>
+<div class="preco">R$ 523,93</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL PINHAO 61,91X146,0 SCANIA 264700</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022780-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517364 ap0022781-0061 rolamento diferencial pinhao 40x90x25mm ford pesado genuine parts bc1b322201b">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517364.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517364</span>
+<div class="preco">R$ 174,64</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL PINHAO 40X90X25MM FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022781-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517375 ap0022782-0061 tubo oleo motor volvo genuine parts 20397666 genuine parts 20397666">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517375.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517375</span>
+<div class="preco">R$ 454,07</div>
+<div class="titulo">TUBO OLEO MOTOR VOLVO GENUINE PARTS 20397666</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022782-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517380 ap0022783-0061 rolamento eixo principal cambio 65x110x3 scania 1548056 genuine parts 1548056">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517380.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517380</span>
+<div class="preco">R$ 199,09</div>
+<div class="titulo">ROLAMENTO EIXO PRINCIPAL CAMBIO 65X110X3 SCANIA 1548056</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022783-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517391 ap0014394-0061 mangueira filtro ar volvo genuine parts 8149322 genuine parts 8149322">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517391.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517391</span>
+<div class="preco">R$ 345,79</div>
+<div class="titulo">MANGUEIRA FILTRO AR VOLVO GENUINE PARTS 8149322</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014394-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517396 ap0015762-0061 rolamento cubo dianteiro vkhb2228 60x115 volvo genuine parts genuine parts 1614801">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517396.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517396</span>
+<div class="preco">R$ 275,94</div>
+<div class="titulo">ROLAMENTO CUBO DIANTEIRO VKHB2228 60X115 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015762-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517407 ap0010860-0061 mangueira intercooler azul 76x132mm vw pesado genuine parts genuine parts 2t2117413">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517407.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517407</span>
+<div class="preco">R$ 286,86</div>
+<div class="titulo">MANGUEIRA INTERCOOLER AZUL 76X132MM VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010860-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517412 ap0022784-0061 rolamento diferencial pinhao f19097 55x1 scania 1408178 genuine parts 1408178">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517412.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517412</span>
+<div class="preco">R$ 625,22</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL PINHAO F19097 55X1 SCANIA 1408178</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022784-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517423 ap0016246-0061 mangueira superior radiador mb pesado genuine parts genuine parts 3885017182">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517423.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517423</span>
+<div class="preco">R$ 256,62</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016246-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517430 ap0015729-0061 parafuso sextavado c/ flange  m18x45x1,5 10.9 rt mb pesado genuine parts 910105018018">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517430.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517430</span>
+<div class="preco">R$ 35,39</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M18X45X1,5 10.9 RT MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015729-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517439 ap0011733-0061 mangueira filtro ar vw pesado genuine parts tat129973 genuine parts tat129973">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517439.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517439</span>
+<div class="preco">R$ 303,67</div>
+<div class="titulo">MANGUEIRA FILTRO AR VW PESADO GENUINE PARTS TAT129973</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011733-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517444 ap0022785-0061 rolamento lateral coroa dir/esq 30217 85 scania 174631 genuine parts 174631">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517444.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517444</span>
+<div class="preco">R$ 310,87</div>
+<div class="titulo">ROLAMENTO LATERAL COROA DIR/ESQ 30217 85 SCANIA 174631</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022785-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517455 ap0019010-0061 mangueira bomba agua vw pesado genuine parts tgg121653 genuine parts tgg121653">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517455.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517455</span>
+<div class="preco">R$ 52,67</div>
+<div class="titulo">MANGUEIRA BOMBA AGUA VW PESADO GENUINE PARTS TGG121653</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019010-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517460 ap0022786-0061 rolamento lateral coroa dir/esq 30217/br volvo genuine parts genuine parts 1652119">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517460.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517460</span>
+<div class="preco">R$ 310,87</div>
+<div class="titulo">ROLAMENTO LATERAL COROA DIR/ESQ 30217/BR VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022786-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517462 ap0002543-0061 parafuso sextavado c/ flange m18x55x1,5 10.9rt haste genuine parts 910105018023">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517462.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517462</span>
+<div class="preco">R$ 34,96</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE M18X55X1,5 10.9RT HASTE</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002543-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517476 ap0022787-0061 rolamento da roda traseiro externo (30220) mb 1924 1935 genuine parts 0079810005">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517476.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517476</span>
+<div class="preco">R$ 503,26</div>
+<div class="titulo">ROLAMENTO DA RODA TRASEIRO EXTERNO (30220) MB 1924 1935</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022787-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517478 ap9321790-0061 parafuso sextavado c/ flange m18x1.5x200 10.9 mb original mb-o 910105018035">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517478.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517478</span>
+<div class="preco">R$ 65,64</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE M18X1.5X200 10.9 MB ORIGINAL</div>
+<div class="marca">MB-O</div>
+<div class="sku">AP9321790-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517487 ap0010118-0061 mangueira reservatorio radiador vw pesado genuine parts genuine parts 2t2121103a">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517487.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517487</span>
+<div class="preco">R$ 142,05</div>
+<div class="titulo">MANGUEIRA RESERVATORIO RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010118-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517492 ap4029689-0061 rolamento de rol. conicos do eixo intermed.30312 scania genuine parts 1357711">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517492.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517492</span>
+<div class="preco">R$ 230,52</div>
+<div class="titulo">ROLAMENTO DE ROL. CONICOS DO EIXO INTERMED.30312 SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4029689-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517503 ap0010756-0061 mangueira retorno termostato reservatorio genuine parts genuine parts 503102847">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517503.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517503</span>
+<div class="preco">R$ 238,49</div>
+<div class="titulo">MANGUEIRA RETORNO TERMOSTATO RESERVATORIO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010756-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517508 ap0022788-0061 rolamento pinhao dianteiro 31312f/set103 scania 174716 genuine parts 174716">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517508.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517508</span>
+<div class="preco">R$ 208,17</div>
+<div class="titulo">ROLAMENTO PINHAO DIANTEIRO 31312F/SET103 SCANIA 174716</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022788-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517510 ap0019053-0061 parafuso sextavado m18x160x1,5 8.8 rp br521771 vw pesado genuine parts nf058753ab">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517510.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517510</span>
+<div class="preco">R$ 27,32</div>
+<div class="titulo">PARAFUSO SEXTAVADO M18X160X1,5 8.8 RP BR521771 VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019053-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517524 ap0022789-0061 rolamento pinhao dianteiro 31312/br51750 volvo genuine parts genuine parts 181609">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517524.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517524</span>
+<div class="preco">R$ 208,17</div>
+<div class="titulo">ROLAMENTO PINHAO DIANTEIRO 31312/BR51750 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022789-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517526 ap0009707-0061 parafuso sextavado c/ flange  m18x110x1,5 10.9 rp mb pesado genuine parts 910105018030">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517526.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517526</span>
+<div class="preco">R$ 38,39</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M18X110X1,5 10.9 RP MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009707-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517535 ap0022790-0061 mangueira enchimento oleo genuine parts 41033657 genuine parts 41033657">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517535.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517535</span>
+<div class="preco">R$ 359,17</div>
+<div class="titulo">MANGUEIRA ENCHIMENTO OLEO GENUINE PARTS 41033657</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022790-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517540 ap0020072-0061 rolamento roda traseiro interno 32011x/vkhb2 mb pesado genuine parts 0029816605">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517540.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517540</span>
+<div class="preco">R$ 85,58</div>
+<div class="titulo">ROLAMENTO RODA TRASEIRO INTERNO 32011X/VKHB2 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020072-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517551 ap0018476-0061 mangueira enchimento oleo genuine parts 41036156 genuine parts 41036156">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517551.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517551</span>
+<div class="preco">R$ 270,76</div>
+<div class="titulo">MANGUEIRA ENCHIMENTO OLEO GENUINE PARTS 41036156</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018476-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517556 ap0018719-0061 rolamento direito lateral coroa direito 32012x/v mb pesado genuine parts 0079812105">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517556.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517556</span>
+<div class="preco">R$ 122,25</div>
+<div class="titulo">ROLAMENTO DIREITO LATERAL COROA DIREITO 32012X/V MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018719-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517567 ap0018231-0061 mangueira inferior radiador genuine parts 8161344 genuine parts 8161344">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517567.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517567</span>
+<div class="preco">R$ 328,82</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR GENUINE PARTS 8161344</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018231-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517575 ap0020114-0061 parafuso allen m12x45x1,75 12.9 rt genuine parts 517575 genuine parts 517575">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517575.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517575</span>
+<div class="preco">R$ 2,03</div>
+<div class="titulo">PARAFUSO ALLEN M12X45X1,75 12.9 RT GENUINE PARTS 517575</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020114-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517583 ap0022791-0061 mangueira superior radiador genuine parts 8161343 genuine parts 8161343">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517583.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517583</span>
+<div class="preco">R$ 364,93</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR GENUINE PARTS 8161343</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022791-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517588 ap0022792-0061 rolamento diferencial 32017x/vkt8756 85x mb pesado genuine parts 0059811405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517588.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517588</span>
+<div class="preco">R$ 122,25</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL 32017X/VKT8756 85X MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022792-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517599 ap0009483-0061 mangueira inferior motor ford pesado genuine parts genuine parts yc458286aa">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517599.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517599</span>
+<div class="preco">R$ 941,45</div>
+<div class="titulo">MANGUEIRA INFERIOR MOTOR FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009483-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517604 ap0022793-0061 rolamento diferencial 32017x/vkt8756 85x volvo genuine parts genuine parts 184623">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517604.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517604</span>
+<div class="preco">R$ 122,25</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL 32017X/VKT8756 85X VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022793-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517615 ap0018407-0061 mangueira compressor br509459 scania genuine parts 1420523 genuine parts 1420523">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517615.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517615</span>
+<div class="preco">R$ 47,44</div>
+<div class="titulo">MANGUEIRA COMPRESSOR BR509459 SCANIA GENUINE PARTS 1420523</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018407-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517620 ap0008113-0061 rolamento lateral coroa 32018xa/vkhb2170 mb pesado genuine parts 0049814305">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517620.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517620</span>
+<div class="preco">R$ 209,49</div>
+<div class="titulo">ROLAMENTO LATERAL COROA 32018XA/VKHB2170 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008113-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517623 ap0022794-0061 parafuso tork externo m14x74,5x2,00 10.9 rp scania 1365812 genuine parts 1365812">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517623.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517623</span>
+<div class="preco">R$ 15,26</div>
+<div class="titulo">PARAFUSO TORK EXTERNO M14X74,5X2,00 10.9 RP SCANIA 1365812</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022794-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517631 ap0013393-0061 mangueira radiador inferior c/mola ford pesado genuine parts genuine parts xc458266ta">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517631.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517631</span>
+<div class="preco">R$ 488,08</div>
+<div class="titulo">MANGUEIRA RADIADOR INFERIOR C/MOLA FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013393-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517636 ap0022795-0061 rolamento eixo diferencial 32019x 95x145 mb pesado genuine parts 0029815405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517636.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517636</span>
+<div class="preco">R$ 208,17</div>
+<div class="titulo">ROLAMENTO EIXO DIFERENCIAL 32019X 95X145 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022795-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517652 ap0022796-0061 rolamento lateral caixa satelite 32020x - 1 mb pesado genuine parts 0019816405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517652.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517652</span>
+<div class="preco">R$ 225,29</div>
+<div class="titulo">ROLAMENTO LATERAL CAIXA SATELITE 32020X - 1 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022796-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517655 ap0003137-0061 parafuso sextavado c/ flange s/furo m16x140x1,5 10.9 genuine parts 3273320171">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517655.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517655</span>
+<div class="preco">R$ 29,34</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE S/FURO M16X140X1,5 10.9</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003137-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517663 ap0022797-0061 mangueira inferior radiador volvo genuine parts 475438 genuine parts 475438">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517663.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517663</span>
+<div class="preco">R$ 130,88</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VOLVO GENUINE PARTS 475438</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022797-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517668 ap0010492-0061 rolamento lateral coroa esquerdo 32022x/vkhb2281 mb pesado genuine parts 0029815005">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517668.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517668</span>
+<div class="preco">R$ 458,85</div>
+<div class="titulo">ROLAMENTO LATERAL COROA ESQUERDO 32022X/VKHB2281 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010492-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517679 ap0015678-0061 mangueira radiador oleo cambio 19x25x101 volvo genuine parts genuine parts 943369">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517679.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517679</span>
+<div class="preco">R$ 149,25</div>
+<div class="titulo">MANGUEIRA RADIADOR OLEO CAMBIO 19X25X101 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015678-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517684 ap0014671-0061 rolamento lateral coroa esquerdo 32022x/vkhb2281/ scania genuine parts 264960">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517684.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517684</span>
+<div class="preco">R$ 468,04</div>
+<div class="titulo">ROLAMENTO LATERAL COROA ESQUERDO 32022X/VKHB2281/ SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014671-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517695 ap0018038-0061 mangueira radiador carcaca termostatica scania genuine parts genuine parts 1888095">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517695.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517695</span>
+<div class="preco">R$ 205,03</div>
+<div class="titulo">MANGUEIRA RADIADOR CARCACA TERMOSTATICA SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018038-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517700 ap0012862-0061 rolamento lateral coroa esquerdo 32024x  120x180x mb pesado genuine parts 0149814405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517700.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517700</span>
+<div class="preco">R$ 482,01</div>
+<div class="titulo">ROLAMENTO LATERAL COROA ESQUERDO 32024X  120X180X MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012862-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517711 ap0019120-0061 mangueira radiador oleo scania genuine parts 242797 genuine parts 242797">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517711.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517711</span>
+<div class="preco">R$ 40,55</div>
+<div class="titulo">MANGUEIRA RADIADOR OLEO SCANIA GENUINE PARTS 242797</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019120-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517716 ap0016236-0061 rolamento eixo diferencial 32214a  70x12 mb pesado genuine parts 0019818005">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517716.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517716</span>
+<div class="preco">R$ 178,13</div>
+<div class="titulo">ROLAMENTO EIXO DIFERENCIAL 32214A  70X12 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016236-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517727 ap0017919-0061 mangueira radiador tub.bomba agua genuine parts 4852226 genuine parts 4852226">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517727.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517727</span>
+<div class="preco">R$ 58,60</div>
+<div class="titulo">MANGUEIRA RADIADOR TUB.BOMBA AGUA GENUINE PARTS 4852226</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017919-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517732 ap0016052-0061 rolamento roda traseira 32221 - 105x190x genuine parts genuine parts 26800270">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517732.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517732</span>
+<div class="preco">R$ 646,17</div>
+<div class="titulo">ROLAMENTO RODA TRASEIRA 32221 - 105X190X GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016052-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517735 ap0005568-0061 parafuso sextavado c/ flange  m22x100x1,5 10.9 rp 517735 genuine parts 517735">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517735.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517735</span>
+<div class="preco">R$ 54,14</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M22X100X1,5 10.9 RP 517735</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005568-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517748 ap0018512-0061 rolamento roda dianteiro interna 32311 55x12 scania 179427 genuine parts 179427">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517748.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517748</span>
+<div class="preco">R$ 254,97</div>
+<div class="titulo">ROLAMENTO RODA DIANTEIRO INTERNA 32311 55X12 SCANIA 179427</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018512-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517751 ap0022798-0061 parafuso sextavado m24x110x2,0 10.9 rp mb pesado genuine parts 308676024003">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517751.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517751</span>
+<div class="preco">R$ 48,20</div>
+<div class="titulo">PARAFUSO SEXTAVADO M24X110X2,0 10.9 RP MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022798-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517759 ap0017693-0061 mangueira superior radiador genuine parts 93824282 genuine parts 93824282">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517759.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517759</span>
+<div class="preco">R$ 128,92</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR GENUINE PARTS 93824282</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017693-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517764 ap0022799-0061 rolamento roda dianteiro interna 32311/br517 mb pesado genuine parts 0069810805">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517764.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517764</span>
+<div class="preco">R$ 283,55</div>
+<div class="titulo">ROLAMENTO RODA DIANTEIRO INTERNA 32311/BR517 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022799-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517780 ap0022800-0061 rolamento pinhao traseiro 32315b - 75x160x58 scania 194137 genuine parts 194137">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517780.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517780</span>
+<div class="preco">R$ 660,15</div>
+<div class="titulo">ROLAMENTO PINHAO TRASEIRO 32315B - 75X160X58 SCANIA 194137</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022800-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517791 ap0018808-0061 mangueira valvula reguladora pressao mb sprinter 6110781481 genuine parts 6110781481">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517791.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517791</span>
+<div class="preco">R$ 89,90</div>
+<div class="titulo">MANGUEIRA VALVULA REGULADORA PRESSAO MB SPRINTER 6110781481</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018808-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517796 ap0012416-0061 rolamento cubo roda 33020/vkhb2145 - 100 mb pesado genuine parts 0059818405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517796.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517796</span>
+<div class="preco">R$ 310,87</div>
+<div class="titulo">ROLAMENTO CUBO RODA 33020/VKHB2145 - 100 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012416-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517807 ap4894936-0061 mangueira agua radiador mb pesado genuine parts 6345010184 genuine parts 6345010184">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517807.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517807</span>
+<div class="preco">R$ 128,61</div>
+<div class="titulo">MANGUEIRA AGUA RADIADOR MB PESADO GENUINE PARTS 6345010184</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4894936-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517812 ap5081505-0061 rolamento roda tras.1938/axor mb pesado genuine parts genuine parts 0099814305">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517812.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517812</span>
+<div class="preco">R$ 366,75</div>
+<div class="titulo">ROLAMENTO RODA TRAS.1938/AXOR MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP5081505-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517815 ap0020247-0061 parafuso sextavado c/ flange  m6x40x1,00 8.8 rp mb pesado genuine parts 910105006012">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517815.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517815</span>
+<div class="preco">R$ 0,94</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X40X1,00 8.8 RP MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020247-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517816 ap0007931-0061 algema dianteira c/bucha nylon mb pesado genuine parts genuine parts 3193200662">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517816.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517816</span>
+<div class="preco">R$ 443,13</div>
+<div class="titulo">ALGEMA DIANTEIRA C/BUCHA NYLON MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007931-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517823 ap0009572-0061 mangueira intercooler vw pesado genuine parts 2t0145844 genuine parts 2t0145844">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517823.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517823</span>
+<div class="preco">R$ 1.044,77</div>
+<div class="titulo">MANGUEIRA INTERCOOLER VW PESADO GENUINE PARTS 2T0145844</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009572-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517828 ap0022801-0061 rolamento eixo prim dt/tras com flange 3 mb pesado genuine parts 0059813305">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517828.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517828</span>
+<div class="preco">R$ 871,04</div>
+<div class="titulo">ROLAMENTO EIXO PRIM DT/TRAS COM FLANGE 3 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022801-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517831 ap0020590-0061 parafuso sextavado c/ flange  m6x20x1,0 10.9 rt vw pesado genuine parts trg130813">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517831.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517831</span>
+<div class="preco">R$ 0,88</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X20X1,0 10.9 RT VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020590-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517839 ap0015907-0061 mangueira inferior radiador 22x22x280/br51489 vw pesado genuine parts 2t2121103">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517839.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517839</span>
+<div class="preco">R$ 89,35</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR 22X22X280/BR51489 VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015907-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517844 ap0014496-0061 rolamento roda traseiro externa 33114 - 70x120x3 mb pesado genuine parts 3449817205">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517844.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517844</span>
+<div class="preco">R$ 254,97</div>
+<div class="titulo">ROLAMENTO RODA TRASEIRO EXTERNA 33114 - 70X120X3 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014496-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517855 ap0010949-0061 mangueira radiador oleo scania genuine parts 1532962 genuine parts 1532962">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517855.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517855</span>
+<div class="preco">R$ 450,33</div>
+<div class="titulo">MANGUEIRA RADIADOR OLEO SCANIA GENUINE PARTS 1532962</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010949-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517860 ap4432688-0061 rolamento roda tras 33116/vkhb2403s - 80x130x37mm mb pesado genuine parts 0129814105">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517860.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517860</span>
+<div class="preco">R$ 310,87</div>
+<div class="titulo">ROLAMENTO RODA TRAS 33116/VKHB2403S - 80X130X37MM MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4432688-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517871 ap0017991-0061 mangueira radiador combustivel e oleo scania genuine parts genuine parts 1741669">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517871.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517871</span>
+<div class="preco">R$ 116,62</div>
+<div class="titulo">MANGUEIRA RADIADOR COMBUSTIVEL E OLEO SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017991-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517876 ap0022802-0061 rolamento pinhao superior  239697/521471a - 6 scania 194050 genuine parts 194050">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517876.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517876</span>
+<div class="preco">R$ 625,22</div>
+<div class="titulo">ROLAMENTO PINHAO SUPERIOR  239697/521471A - 6 SCANIA 194050</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022802-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517879 ap0004749-0061 parafuso sextavado m24x130x2,0 10.9 rp mb pesado genuine parts 308765024015">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517879.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517879</span>
+<div class="preco">R$ 43,56</div>
+<div class="titulo">PARAFUSO SEXTAVADO M24X130X2,0 10.9 RP MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004749-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517887 ap0011695-0061 mangueira agua radiador mb pesado genuine parts 6345010184 genuine parts 6345010184">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517887.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517887</span>
+<div class="preco">R$ 116,58</div>
+<div class="titulo">MANGUEIRA AGUA RADIADOR MB PESADO GENUINE PARTS 6345010184</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011695-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517892 ap1620244-0061 rolamento copo pinhao f518713 mb pesado genuine parts genuine parts 0029818805">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517892.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517892</span>
+<div class="preco">R$ 511,97</div>
+<div class="titulo">ROLAMENTO COPO PINHAO F518713 MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP1620244-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517895 ap0022804-0061 parafuso sextavado m20x130x1,5 8.8 rp/br 517184 517895 genuine parts 517895">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517895.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517895</span>
+<div class="preco">R$ 43,87</div>
+<div class="titulo">PARAFUSO SEXTAVADO M20X130X1,5 8.8 RP/BR 517184 517895</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022804-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517908 ap0005533-0061 rolamento eixo tandem ext 528946/331126q mb pesado genuine parts 0049810605">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517908.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517908</span>
+<div class="preco">R$ 450,58</div>
+<div class="titulo">ROLAMENTO EIXO TANDEM EXT 528946/331126Q MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005533-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517924 ap4121156-0061 rolamento tras.alternador 62012rs mb pesado genuine parts genuine parts 006254006201">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517924.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517924</span>
+<div class="preco">R$ 10,20</div>
+<div class="titulo">ROLAMENTO TRAS.ALTERNADOR 62012RS MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4121156-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517935 ap0003357-0061 mangueira c/aneis aco verm.silicone 89x1 scania 488368 genuine parts 488368">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517935.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517935</span>
+<div class="preco">R$ 370,06</div>
+<div class="titulo">MANGUEIRA C/ANEIS ACO VERM.SILICONE 89X1 SCANIA 488368</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003357-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517940 ap0018421-0061 rolamento maior bomba agua 62062rs  30x6 mb pesado genuine parts 006254006206">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517940.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517940</span>
+<div class="preco">R$ 26,68</div>
+<div class="titulo">ROLAMENTO MAIOR BOMBA AGUA 62062RS  30X6 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018421-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517951 ap0022805-0061 mangueira radiador scania genuine parts 1536631 genuine parts 1536631">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517951.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517951</span>
+<div class="preco">R$ 247,47</div>
+<div class="titulo">MANGUEIRA RADIADOR SCANIA GENUINE PARTS 1536631</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022805-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517956 ap0020606-0061 rolamento traseiro alternador 622012rs mb pesado 0029819025 genuine parts 0029819025">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517956.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517956</span>
+<div class="preco">R$ 12,22</div>
+<div class="titulo">ROLAMENTO TRASEIRO ALTERNADOR 622012RS MB PESADO 0029819025</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020606-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517967 ap0013647-0061 mangueira intercooler volare genuine parts 6013101014006 genuine parts 6013101014006">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517967.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517967</span>
+<div class="preco">R$ 652,99</div>
+<div class="titulo">MANGUEIRA INTERCOOLER VOLARE GENUINE PARTS 6013101014006</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013647-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517972 ap0022806-0061 rolamento diferencial 805262/vkt8796 scania genuine parts genuine parts 1309569">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517972.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517972</span>
+<div class="preco">R$ 275,94</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL 805262/VKT8796 SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022806-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517975 ap0010199-0061 parafuso sextavado m24x90x2,0 10.9 rt mb pesado 308676024003 genuine parts 308676024003">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517975.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517975</span>
+<div class="preco">R$ 44,01</div>
+<div class="titulo">PARAFUSO SEXTAVADO M24X90X2,0 10.9 RT MB PESADO 308676024003</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010199-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517983 ap0014982-0061 mangueira agua ligacao tanque (borracha) mb pesado genuine parts 3825010084">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517983.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517983</span>
+<div class="preco">R$ 231,05</div>
+<div class="titulo">MANGUEIRA AGUA LIGACAO TANQUE (BORRACHA) MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014982-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517988 ap0022807-0061 rolamento diferencial njg2309/vhnrc3 volvo genuine parts genuine parts 1523243">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517988.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517988</span>
+<div class="preco">R$ 275,94</div>
+<div class="titulo">ROLAMENTO DIFERENCIAL NJG2309/VHNRC3 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022807-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="517999 ap0022808-0061 mangueira reservatorio expansao volvo genuine parts 1665126 genuine parts 1665126">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/517999.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">517999</span>
+<div class="preco">R$ 228,26</div>
+<div class="titulo">MANGUEIRA RESERVATORIO EXPANSAO VOLVO GENUINE PARTS 1665126</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022808-0061</div>
+</div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
+const inp = document.getElementById('q');
+const cards = document.querySelectorAll('.card');
+const stat = document.getElementById('stat');
+const btnTodos = document.getElementById('f-todos');
+const btnReais = document.getElementById('f-reais');
+const btnPlace = document.getElementById('f-place');
+let filtro = 'todos'; // 'todos' | 'reais' | 'placeholders'
+
+function aplicarFiltros() {
+    const q = inp.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(c => {
+        const txt = c.dataset.search;
+        const isPlace = c.classList.contains('placeholder');
+        const passaBusca = !q || txt.includes(q);
+        const passaFiltro = filtro === 'todos' || (filtro === 'reais' && !isPlace) || (filtro === 'placeholders' && isPlace);
+        const show = passaBusca && passaFiltro;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    stat.textContent = visible + ' / ' + cards.length + ' itens';
+}
+
+inp.addEventListener('input', aplicarFiltros);
+
+function setFiltro(novo, btnAtivo) {
+    filtro = novo;
+    [btnTodos, btnReais, btnPlace].forEach(b => b.classList.remove('active'));
+    btnAtivo.classList.add('active');
+    aplicarFiltros();
+}
+btnTodos.addEventListener('click', () => setFiltro('todos', btnTodos));
+btnReais.addEventListener('click', () => setFiltro('reais', btnReais));
+btnPlace.addEventListener('click', () => setFiltro('placeholders', btnPlace));
+</script></body></html>

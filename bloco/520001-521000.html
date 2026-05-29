@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Bloco 520001-521000 | Anchieta Pe&ccedil;as ML</title>
+<meta property="og:title" content="Bloco 520001-521000 &middot; Anchieta Pe&ccedil;as">
+<meta property="og:description" content="226 produtos da Fonte BR Company">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #003366; color: white; padding: 1rem 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
+.toolbar { background: white; padding: .75rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar input { padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: .9rem; min-width: 240px; }
+.toolbar .stat { font-size: .85rem; color: #6b7280; }
+.toolbar button { padding: .5rem .85rem; border: 1px solid #d1d5db; border-radius: 6px; background: white; cursor: pointer; font-size: .85rem; transition: all .15s; }
+.toolbar button:hover { background: #f3f4f6; }
+.toolbar button.active { background: #003366; color: white; border-color: #003366; }
+.toolbar button.warn { border-color: #f59e0b; color: #b45309; }
+.toolbar button.warn.active { background: #f59e0b; color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); overflow: hidden; transition: transform .15s, box-shadow .15s; position: relative; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card a { color: inherit; text-decoration: none; display: block; }
+.card.placeholder { border: 2px solid #f59e0b; }
+.card .badge-placeholder { position: absolute; top: 8px; right: 8px; background: #f59e0b; color: white; font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+.thumb { width: 100%; height: 180px; background: #f3f4f6 center / contain no-repeat; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: .8rem; }
+.thumb.placeholder-bg { opacity: .55; filter: grayscale(.4); }
+.no-img { background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px); }
+.body { padding: .75rem; }
+.cod { font-family: monospace; background: #003366; color: white; font-size: .75rem; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.card.placeholder .cod { background: #f59e0b; font-size: 1rem; padding: 5px 10px; font-weight: 700; letter-spacing: .04em; }
+.preco { color: #10b981; font-weight: 600; font-size: 1.05rem; margin: .25rem 0; }
+.titulo { font-size: .85rem; line-height: 1.3; margin: .25rem 0; min-height: 2.4em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.marca { color: #6b7280; font-size: .75rem; }
+.sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
+.card.placeholder .sku { color: #b45309; font-weight: 600; }
+
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
+/* Pagina individual SKU */
+.detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.detail-grid .photos img { width: 100%; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e5e7eb; }
+.detail h2 { margin-top: 0; }
+.detail .preco-big { font-size: 2rem; color: #10b981; font-weight: 700; margin: 1rem 0; }
+.detail .field { margin-bottom: .75rem; }
+.detail .field label { font-size: .8rem; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+.detail .field .val { font-size: .95rem; margin-top: .15rem; }
+.detail pre.desc { background: #f9fafb; padding: 1rem; border-radius: 6px; white-space: pre-wrap; font-family: inherit; font-size: .9rem; line-height: 1.5; border-left: 3px solid #003366; }
+.back { display: inline-block; margin-bottom: 1rem; color: #003366; text-decoration: none; font-size: .9rem; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+</style></head><body>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Bloco 520001-521000 &middot; Anchieta Pe&ccedil;as</h1>
+    <div class="meta"><a href="../index.html" style="color:#cbd5e1;">&larr; voltar ao &iacute;ndice</a> &middot; 226 produtos &middot; 0 com foto real &middot; 226 gen&eacute;ricas</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Bloco 520001-521000
+226 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/520001-521000.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Anchieta bloco 520001&body=Anchieta Peças - Bloco 520001-521000
+226 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/520001-521000.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
+<div class="toolbar">
+<input type="search" id="q" placeholder="Buscar neste bloco...">
+<button id="f-todos" class="active">Todos (226)</button>
+<button id="f-reais">Com foto real (0)</button>
+<button id="f-place" class="warn">S&oacute; gen&eacute;ricas (226)</button>
+<div class="stat" id="stat">226 / 226 itens</div>
+</div>
+<div class="grid">
+<div class="card placeholder" data-search="520052 ap0022839-0061 parafuso sextavado c/ flange  m18x2x150 10.9 rp 520052 genuine parts 520052">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520052.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520052</span>
+<div class="preco">R$ 25,15</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M18X2X150 10.9 RP 520052</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022839-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520068 ap0017625-0061 parafuso sextavado m22x1,5x110 10.9 rp genuine parts 520068 genuine parts 520068">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520068.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520068</span>
+<div class="preco">R$ 64,34</div>
+<div class="titulo">PARAFUSO SEXTAVADO M22X1,5X110 10.9 RP GENUINE PARTS 520068</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017625-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520132 ap0019719-0061 parafuso sextavado m12x1,75x45 10.9 ch 19 rt scania 520132 genuine parts 520132">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520132.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520132</span>
+<div class="preco">R$ 6,25</div>
+<div class="titulo">PARAFUSO SEXTAVADO M12X1,75X45 10.9 CH 19 RT SCANIA 520132</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019719-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520148 ap0009545-0061 parafuso de roda estriado dt.m22x68/78x1,5 10. mb pesado genuine parts 0004012371">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520148.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520148</span>
+<div class="preco">R$ 24,31</div>
+<div class="titulo">PARAFUSO DE RODA ESTRIADO DT.M22X68/78X1,5 10. MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009545-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520164 ap0022840-0061 parafuso cubo roda disco/carcaca dif.traseiro 16x scania genuine parts 331011">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520164.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520164</span>
+<div class="preco">R$ 20,96</div>
+<div class="titulo">PARAFUSO CUBO RODA DISCO/CARCACA DIF.TRASEIRO 16X SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022840-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520180 ap0015458-0061 parafuso sextavado m18x130x2,5x 8.8 rp genuine parts 520180 genuine parts 520180">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520180.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520180</span>
+<div class="preco">R$ 37,55</div>
+<div class="titulo">PARAFUSO SEXTAVADO M18X130X2,5X 8.8 RP GENUINE PARTS 520180</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015458-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520196 ap0008475-0061 pino de centro cb m18x1,5x270 10.9 mb pesado genuine parts genuine parts 3363240171">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520196.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520196</span>
+<div class="preco">R$ 108,27</div>
+<div class="titulo">PINO DE CENTRO CB M18X1,5X270 10.9 MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008475-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520212 ap0004417-0061 conjunto parafuso de roda dt.completo m22x1,5x88,5/9 volvo genuine parts 20515515">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520212.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520212</span>
+<div class="preco">R$ 42,97</div>
+<div class="titulo">CONJUNTO PARAFUSO DE RODA DT.COMPLETO M22X1,5X88,5/9 VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004417-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520228 ap0004600-0061 conjunto parafuso de roda dt.aluminio completo 7/8&quot;x85/9 genuine parts 1528712">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520228.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520228</span>
+<div class="preco">R$ 50,65</div>
+<div class="titulo">CONJUNTO PARAFUSO DE RODA DT.ALUMINIO COMPLETO 7/8&quot;X85/9</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004600-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520244 ap0018612-0061 parafuso allen m14x2,00x45 rt 12.9 genuine parts 520244 genuine parts 520244">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520244.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520244</span>
+<div class="preco">R$ 6,78</div>
+<div class="titulo">PARAFUSO ALLEN M14X2,00X45 RT 12.9 GENUINE PARTS 520244</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018612-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520296 ap0010165-0061 parafuso de roda traseiro (recartilhado) m18x1,5x60/68 10. genuine parts 42119082">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520296.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520296</span>
+<div class="preco">R$ 16,45</div>
+<div class="titulo">PARAFUSO DE RODA TRASEIRO (RECARTILHADO) M18X1,5X60/68 10.</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010165-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520312 ap0022841-0061 parafuso allen m12x25x1,5 8.8 rt cabeca 12x genuine parts genuine parts 520312">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520312.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520312</span>
+<div class="preco">R$ 6,25</div>
+<div class="titulo">PARAFUSO ALLEN M12X25X1,5 8.8 RT CABECA 12X GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022841-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520328 ap0008429-0061 mangueira intercooler menor mb sprinter genuine parts genuine parts 9015287482">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520328.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520328</span>
+<div class="preco">R$ 283,65</div>
+<div class="titulo">MANGUEIRA INTERCOOLER MENOR MB SPRINTER GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008429-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520344 ap0003361-0061 mangueira superior radiador mb pesado genuine parts genuine parts 9415010382">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520344.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520344</span>
+<div class="preco">R$ 296,82</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003361-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520360 ap0007188-0061 mangueira inferior radiador c/ mola vw pesado genuine parts genuine parts 2w0121073h">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520360.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520360</span>
+<div class="preco">R$ 291,48</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR C/ MOLA VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007188-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520489 ap0020539-0061 parafuso allen m12x1,75x35 8.8 rt genuine parts 520489 genuine parts 520489">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520489.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520489</span>
+<div class="preco">R$ 1,72</div>
+<div class="titulo">PARAFUSO ALLEN M12X1,75X35 8.8 RT GENUINE PARTS 520489</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020539-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520585 ap0022842-0061 parafuso tork c/ flange  m6x1x15 8.8 rt genuine parts 520585 genuine parts 520585">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520585.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520585</span>
+<div class="preco">R$ 1,01</div>
+<div class="titulo">PARAFUSO TORK C/ FLANGE  M6X1X15 8.8 RT GENUINE PARTS 520585</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022842-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520748 ap0001646-0061 parafuso tork c/ flange  m16x2,00x125 8.8 rp scania 1746111 genuine parts 1746111">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520748.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520748</span>
+<div class="preco">R$ 58,60</div>
+<div class="titulo">PARAFUSO TORK C/ FLANGE  M16X2,00X125 8.8 RP SCANIA 1746111</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001646-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520764 ap0002424-0061 parafuso cardan completo c/porca sextavada flan.m14 volvo genuine parts 1672273">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520764.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520764</span>
+<div class="preco">R$ 9,12</div>
+<div class="titulo">PARAFUSO CARDAN COMPLETO C/PORCA SEXTAVADA FLAN.M14 VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002424-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520765 ap0006410-0061 abracadeira cruzeta 65mm c/reforco lateral e parafuso genuine parts 3849957010">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520765.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520765</span>
+<div class="preco">R$ 44,84</div>
+<div class="titulo">ABRACADEIRA CRUZETA 65MM C/REFORCO LATERAL E PARAFUSO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006410-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520766 ap0010861-0061 conexao uniao redutora plastica 06x04mm genuine parts 520766 genuine parts 520766">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520766.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520766</span>
+<div class="preco">R$ 2,73</div>
+<div class="titulo">CONEXAO UNIAO REDUTORA PLASTICA 06X04MM GENUINE PARTS 520766</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010861-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520767 ap0009292-0061 bucha mola dianteiro parte traseiro  24x51x110mm volvo genuine parts 20959115">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520767.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520767</span>
+<div class="preco">R$ 583,92</div>
+<div class="titulo">BUCHA MOLA DIANTEIRO PARTE TRASEIRO  24X51X110MM VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009292-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520768 ap0007275-0061 conexao uniao redutora plastica 08x06mm genuine parts 520768 genuine parts 520768">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520768.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520768</span>
+<div class="preco">R$ 3,21</div>
+<div class="titulo">CONEXAO UNIAO REDUTORA PLASTICA 08X06MM GENUINE PARTS 520768</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007275-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520769 ap0022843-0061 guia valvula escape std volvo genuine parts 1545135 genuine parts 1545135">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520769.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520769</span>
+<div class="preco">R$ 86,27</div>
+<div class="titulo">GUIA VALVULA ESCAPE STD VOLVO GENUINE PARTS 1545135</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022843-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520770 ap0013557-0061 conexao uniao redutora plastica 10x08mm genuine parts 520770 genuine parts 520770">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520770.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520770</span>
+<div class="preco">R$ 3,24</div>
+<div class="titulo">CONEXAO UNIAO REDUTORA PLASTICA 10X08MM GENUINE PARTS 520770</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013557-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520771 ap0016107-0061 mangueira reservatorio oleo embreagem vw pesado 2t0721465 genuine parts 2t0721465">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520771.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520771</span>
+<div class="preco">R$ 168,25</div>
+<div class="titulo">MANGUEIRA RESERVATORIO OLEO EMBREAGEM VW PESADO 2T0721465</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016107-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520772 ap0013068-0061 conexao uniao redutora plastica 12x10mm genuine parts 520772 genuine parts 520772">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520772.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520772</span>
+<div class="preco">R$ 4,50</div>
+<div class="titulo">CONEXAO UNIAO REDUTORA PLASTICA 12X10MM GENUINE PARTS 520772</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013068-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520773 ap0016060-0061 mangueira enchimento oleo vw pesado genuine parts 2t2115617k genuine parts 2t2115617k">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520773.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520773</span>
+<div class="preco">R$ 235,38</div>
+<div class="titulo">MANGUEIRA ENCHIMENTO OLEO VW PESADO GENUINE PARTS 2T2115617K</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016060-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520774 ap0019880-0061 conexao uniao redutora plastica 16x12mm genuine parts 520774 genuine parts 520774">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520774.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520774</span>
+<div class="preco">R$ 15,02</div>
+<div class="titulo">CONEXAO UNIAO REDUTORA PLASTICA 16X12MM GENUINE PARTS 520774</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019880-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520775 ap0011028-0061 mangueira inferior radiador vw pesado genuine parts genuine parts 2t2121103b">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520775.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520775</span>
+<div class="preco">R$ 134,47</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011028-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520776 ap0022844-0061 batente borracha suspensao dt/traseiro  100,50x61 volvo genuine parts 351111">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520776.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520776</span>
+<div class="preco">R$ 206,18</div>
+<div class="titulo">BATENTE BORRACHA SUSPENSAO DT/TRASEIRO  100,50X61 VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022844-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520777 ap0019556-0061 conexao redutor tubo plastico 06x04mm genuine parts 520777 genuine parts 520777">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520777.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520777</span>
+<div class="preco">R$ 9,53</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 06X04MM GENUINE PARTS 520777</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019556-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520778 ap0007190-0061 bucha mancal 109,5x80x65mm poliuretano mb pesado 9413260050 genuine parts 9413260050">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520778.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520778</span>
+<div class="preco">R$ 593,64</div>
+<div class="titulo">BUCHA MANCAL 109,5X80X65MM POLIURETANO MB PESADO 9413260050</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007190-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520779 ap0018701-0061 conexao redutor tubo plastico 08x04mm genuine parts 520779 genuine parts 520779">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520779.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520779</span>
+<div class="preco">R$ 10,30</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 08X04MM GENUINE PARTS 520779</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018701-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520780 ap0015617-0061 bucha algema suspensao traseiro 38,30x32x12, mb sprinter genuine parts 9013240050">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520780.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520780</span>
+<div class="preco">R$ 97,34</div>
+<div class="titulo">BUCHA ALGEMA SUSPENSAO TRASEIRO 38,30X32X12, MB SPRINTER</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015617-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520781 ap0016610-0061 conexao redutor tubo plastico 08x06mm genuine parts 520781 genuine parts 520781">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520781.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520781</span>
+<div class="preco">R$ 13,27</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 08X06MM GENUINE PARTS 520781</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016610-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520782 ap0008057-0061 bucha olhal barra estabilizador traseiro 57,6x28x64m volvo genuine parts 22139175">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520782.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520782</span>
+<div class="preco">R$ 164,17</div>
+<div class="titulo">BUCHA OLHAL BARRA ESTABILIZADOR TRASEIRO 57,6X28X64M VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008057-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520783 ap0018636-0061 conexao redutor tubo plastico 10x06mm genuine parts 520783 genuine parts 520783">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520783.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520783</span>
+<div class="preco">R$ 14,15</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 10X06MM GENUINE PARTS 520783</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018636-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520784 ap0012584-0061 mangueira arref.agua reservatorio expansao vw pesado genuine parts 2t2265053c">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520784.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520784</span>
+<div class="preco">R$ 152,98</div>
+<div class="titulo">MANGUEIRA ARREF.AGUA RESERVATORIO EXPANSAO VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012584-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520785 ap0019840-0061 conexao redutor tubo plastico 10x08mm genuine parts 520785 genuine parts 520785">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520785.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520785</span>
+<div class="preco">R$ 12,22</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 10X08MM GENUINE PARTS 520785</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019840-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520786 ap0022845-0061 guia valvula admissao std volvo genuine parts 422320 genuine parts 422320">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520786.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520786</span>
+<div class="preco">R$ 88,05</div>
+<div class="titulo">GUIA VALVULA ADMISSAO STD VOLVO GENUINE PARTS 422320</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022845-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520787 ap0018711-0061 conexao redutor tubo plastico 12x06mm genuine parts 520787 genuine parts 520787">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520787.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520787</span>
+<div class="preco">R$ 17,49</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 12X06MM GENUINE PARTS 520787</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018711-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520788 ap0010774-0061 mangueira superior radiador vw pesado genuine parts genuine parts 2t0121101a">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520788.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520788</span>
+<div class="preco">R$ 269,12</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010774-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520789 ap0017692-0061 conexao redutor tubo plastico 12x08mm genuine parts 520789 genuine parts 520789">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520789.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520789</span>
+<div class="preco">R$ 16,41</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 12X08MM GENUINE PARTS 520789</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017692-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520790 ap0022846-0061 valvula escape std 45 graus mb pesado genuine parts genuine parts 9060500327">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520790.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520790</span>
+<div class="preco">R$ 198,95</div>
+<div class="titulo">VALVULA ESCAPE STD 45 GRAUS MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022846-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520791 ap0019964-0061 conexao redutor tubo plastico 12x10mm genuine parts 520791 genuine parts 520791">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520791.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520791</span>
+<div class="preco">R$ 23,79</div>
+<div class="titulo">CONEXAO REDUTOR TUBO PLASTICO 12X10MM GENUINE PARTS 520791</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019964-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520792 ap0020237-0061 mangueira compressor ar ao bloco vw pesado genuine parts genuine parts 2r0121625c">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520792.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520792</span>
+<div class="preco">R$ 84,13</div>
+<div class="titulo">MANGUEIRA COMPRESSOR AR AO BLOCO VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020237-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520793 ap0008662-0061 solenoide m10x1 12v 2pinos chatos cabo c volvo genuine parts genuine parts 2rd901015b">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520793.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520793</span>
+<div class="preco">R$ 499,29</div>
+<div class="titulo">SOLENOIDE M10X1 12V 2PINOS CHATOS CABO C VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008662-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520794 ap0022847-0061 valvula escape motor original mb pesado genuine parts genuine parts 9060500827">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520794.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520794</span>
+<div class="preco">R$ 192,03</div>
+<div class="titulo">VALVULA ESCAPE MOTOR ORIGINAL MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022847-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520795 ap0009303-0061 cotovelo macho p/tubo 6mm m12x1,5mm genuine parts 520795 genuine parts 520795">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520795.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520795</span>
+<div class="preco">R$ 24,41</div>
+<div class="titulo">COTOVELO MACHO P/TUBO 6MM M12X1,5MM GENUINE PARTS 520795</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009303-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520796 ap0013901-0061 tirante valvula nivel cabine traseiro 56mm plasti scania genuine parts 1386424">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520796.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520796</span>
+<div class="preco">R$ 39,75</div>
+<div class="titulo">TIRANTE VALVULA NIVEL CABINE TRASEIRO 56MM PLASTI SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013901-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520797 ap0004142-0061 cotovelo macho p/tubo 6mm m16x1,50 genuine parts 520797 genuine parts 520797">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520797.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520797</span>
+<div class="preco">R$ 43,31</div>
+<div class="titulo">COTOVELO MACHO P/TUBO 6MM M16X1,50 GENUINE PARTS 520797</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004142-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520798 ap0007865-0061 tirante valvula nivel cabine traseiro 125mm/8mm p scania genuine parts 1386423">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520798.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520798</span>
+<div class="preco">R$ 40,17</div>
+<div class="titulo">TIRANTE VALVULA NIVEL CABINE TRASEIRO 125MM/8MM P SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007865-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520801 ap5401970-0061 bomba bascular cabine genuine parts 99458304 genuine parts 99458304">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520801.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520801</span>
+<div class="preco">R$ 988,75</div>
+<div class="titulo">BOMBA BASCULAR CABINE GENUINE PARTS 99458304</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP5401970-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520802 ap0001714-0061 cotovelo macho tubo 8x16x1,5mm genuine parts 520802 genuine parts 520802">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520802.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520802</span>
+<div class="preco">R$ 40,91</div>
+<div class="titulo">COTOVELO MACHO TUBO 8X16X1,5MM GENUINE PARTS 520802</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001714-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520804 ap0011530-0061 cotovelo macho tubo 10x12x1,5mm genuine parts 520804 genuine parts 520804">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520804.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520804</span>
+<div class="preco">R$ 36,99</div>
+<div class="titulo">COTOVELO MACHO TUBO 10X12X1,5MM GENUINE PARTS 520804</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011530-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520805 ap0002146-0061 caixa direcao 2012...remano mb sprinter genuine parts genuine parts 9064601700">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520805.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520805</span>
+<div class="preco">R$ 4.889,96</div>
+<div class="titulo">CAIXA DIRECAO 2012...REMANO MB SPRINTER GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002146-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520806 ap0004291-0061 cotovelo macho coletor p/tubo 10 m16x1,5 scania 302617 genuine parts 302617">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520806.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520806</span>
+<div class="preco">R$ 38,04</div>
+<div class="titulo">COTOVELO MACHO COLETOR P/TUBO 10 M16X1,5 SCANIA 302617</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004291-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520807 ap0011031-0061 lanterna traseira carreta randon c/chico genuine parts genuine parts 520807">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520807.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520807</span>
+<div class="preco">R$ 506,92</div>
+<div class="titulo">LANTERNA TRASEIRA CARRETA RANDON C/CHICO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011031-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520808 ap0004496-0061 cotovelo macho tubo 10x22x1,5mm genuine parts 520808 genuine parts 520808">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520808.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520808</span>
+<div class="preco">R$ 34,71</div>
+<div class="titulo">COTOVELO MACHO TUBO 10X22X1,5MM GENUINE PARTS 520808</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004496-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520809 ap0019918-0061 pino p/parafuso suporte catalisador scania genuine parts genuine parts 1815665">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520809.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520809</span>
+<div class="preco">R$ 84,57</div>
+<div class="titulo">PINO P/PARAFUSO SUPORTE CATALISADOR SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019918-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520810 ap0013706-0061 cotovelo macho tubo 12x12x1,5mm genuine parts 520810 genuine parts 520810">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520810.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520810</span>
+<div class="preco">R$ 39,26</div>
+<div class="titulo">COTOVELO MACHO TUBO 12X12X1,5MM GENUINE PARTS 520810</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013706-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520811 ap0004777-0061 rolamento f202909 p/cambio 10 marchas c/ scania 355708 genuine parts 355708">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520811.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520811</span>
+<div class="preco">R$ 60,43</div>
+<div class="titulo">ROLAMENTO F202909 P/CAMBIO 10 MARCHAS C/ SCANIA 355708</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004777-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520815 ap0022848-0061 suporte lanterna traseiro completa led esquerdo  b carreta genuine parts 520815">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520815.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520815</span>
+<div class="preco">R$ 1.323,96</div>
+<div class="titulo">SUPORTE LANTERNA TRASEIRO COMPLETA LED ESQUERDO  B CARRETA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022848-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520816 ap7129542-0061 cotovelo macho tubo 16x16x1,5mm scania genuine parts 520816 genuine parts 520816">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520816.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520816</span>
+<div class="preco">R$ 101,23</div>
+<div class="titulo">COTOVELO MACHO TUBO 16X16X1,5MM SCANIA GENUINE PARTS 520816</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP7129542-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520817 ap0022849-0061 suporte lanterna traseiro completa led direito  b carreta genuine parts 520817">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520817.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520817</span>
+<div class="preco">R$ 1.401,60</div>
+<div class="titulo">SUPORTE LANTERNA TRASEIRO COMPLETA LED DIREITO  B CARRETA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022849-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520818 ap2773909-0061 cotovelo macho tubo 16x22x1,5mm scania genuine parts 520818 genuine parts 520818">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520818.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520818</span>
+<div class="preco">R$ 71,97</div>
+<div class="titulo">COTOVELO MACHO TUBO 16X22X1,5MM SCANIA GENUINE PARTS 520818</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2773909-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520820 ap0020474-0061 conector macho tubo 4mm rosca m5 genuine parts pc04m5 genuine parts pc04m5">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520820.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520820</span>
+<div class="preco">R$ 6,92</div>
+<div class="titulo">CONECTOR MACHO TUBO 4MM ROSCA M5 GENUINE PARTS PC04M5</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020474-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520822 ap0022850-0061 conector macho tubo 4mm rosca m6 genuine parts pc04m6 genuine parts pc04m6">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520822.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520822</span>
+<div class="preco">R$ 8,07</div>
+<div class="titulo">CONECTOR MACHO TUBO 4MM ROSCA M6 GENUINE PARTS PC04M6</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022850-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520824 ap0016072-0061 conector macho p/tubo 4mm x 1/8&quot;bsp genuine parts pc04g01 genuine parts pc04g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520824.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520824</span>
+<div class="preco">R$ 7,69</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 4MM X 1/8&quot;BSP GENUINE PARTS PC04G01</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016072-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520826 ap0022852-0061 conector macho tubo 4mmx1/4&quot;bsp genuine parts pc04g02 genuine parts pc04g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520826.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520826</span>
+<div class="preco">R$ 9,82</div>
+<div class="titulo">CONECTOR MACHO TUBO 4MMX1/4&quot;BSP GENUINE PARTS PC04G02</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022852-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520828 ap0019742-0061 conector macho tubo 6mm rosca m5 genuine parts pc06m5 genuine parts pc06m5">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520828.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520828</span>
+<div class="preco">R$ 8,27</div>
+<div class="titulo">CONECTOR MACHO TUBO 6MM ROSCA M5 GENUINE PARTS PC06M5</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019742-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520830 ap0018693-0061 conector macho tubo 6mm rosca m6 genuine parts pc06m6 genuine parts pc06m6">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520830.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520830</span>
+<div class="preco">R$ 7,69</div>
+<div class="titulo">CONECTOR MACHO TUBO 6MM ROSCA M6 GENUINE PARTS PC06M6</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018693-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520831 ap0022855-0061 mangueira direcao hidraulica vw pesado genuine parts genuine parts 2t2422892f">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520831.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520831</span>
+<div class="preco">R$ 199,83</div>
+<div class="titulo">MANGUEIRA DIRECAO HIDRAULICA VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022855-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520833 ap0004903-0061 conector macho tubo 6mm x 1/8&quot; bsp genuine parts pc06g01 genuine parts pc06g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520833.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520833</span>
+<div class="preco">R$ 11,21</div>
+<div class="titulo">CONECTOR MACHO TUBO 6MM X 1/8&quot; BSP GENUINE PARTS PC06G01</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004903-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520835 ap0009662-0061 conector macho p/tubo 6mmx1/4&quot;bsp c/orin genuine parts genuine parts pc06g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520835.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520835</span>
+<div class="preco">R$ 12,76</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 6MMX1/4&quot;BSP C/ORIN GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009662-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520836 ap0006454-0061 trambulador alavanca do cambio volare genuine parts genuine parts 6013004138001">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520836.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520836</span>
+<div class="preco">R$ 2.724,51</div>
+<div class="titulo">TRAMBULADOR ALAVANCA DO CAMBIO VOLARE GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006454-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520837 ap0022856-0061 conector macho tubo 6mmx3/8&quot; bsp genuine parts pc06g03 genuine parts pc06g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520837.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520837</span>
+<div class="preco">R$ 16,00</div>
+<div class="titulo">CONECTOR MACHO TUBO 6MMX3/8&quot; BSP GENUINE PARTS PC06G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022856-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520838 ap0012345-0061 volante direcao esportivo estria grossa/ ford pesado genuine parts 1c453600aa">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520838.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520838</span>
+<div class="preco">R$ 872,57</div>
+<div class="titulo">VOLANTE DIRECAO ESPORTIVO ESTRIA GROSSA/ FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012345-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520839 ap0022857-0061 conector macho p/tubo 6mm x 1/2&quot;bsp genuine parts pc06g04 genuine parts pc06g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520839.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520839</span>
+<div class="preco">R$ 27,35</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 6MM X 1/2&quot;BSP GENUINE PARTS PC06G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022857-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520840 ap0022858-0061 acabamento lateral parabrisa ld scania genuine parts 1769912 genuine parts 1769912">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520840.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520840</span>
+<div class="preco">R$ 499,29</div>
+<div class="titulo">ACABAMENTO LATERAL PARABRISA LD SCANIA GENUINE PARTS 1769912</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022858-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520841 ap0009697-0061 conector macho p/tubo 8mm x 1/8&quot; bsp genuine parts pc08g01 genuine parts pc08g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520841.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520841</span>
+<div class="preco">R$ 8,55</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 8MM X 1/8&quot; BSP GENUINE PARTS PC08G01</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009697-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520842 ap0006745-0061 reparo  barra estabilizador cabine volvo genuine parts genuine parts 3944692">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520842.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520842</span>
+<div class="preco">R$ 577,89</div>
+<div class="titulo">REPARO  BARRA ESTABILIZADOR CABINE VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006745-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520843 ap0010379-0061 conector macho tubo 8mm x 1/4&quot; bsp genuine parts pc08g02 genuine parts pc08g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520843.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520843</span>
+<div class="preco">R$ 9,86</div>
+<div class="titulo">CONECTOR MACHO TUBO 8MM X 1/4&quot; BSP GENUINE PARTS PC08G02</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010379-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520844 ap0022859-0061 suporte cabo afogador volvo genuine parts 8125235 genuine parts 8125235">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520844.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520844</span>
+<div class="preco">R$ 76,53</div>
+<div class="titulo">SUPORTE CABO AFOGADOR VOLVO GENUINE PARTS 8125235</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022859-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520845 ap0019356-0061 conector macho p/tubo 8mm x 3/8&quot;bsp genuine parts pc08g03 genuine parts pc08g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520845.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520845</span>
+<div class="preco">R$ 13,94</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 8MM X 3/8&quot;BSP GENUINE PARTS PC08G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019356-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520846 ap0022860-0061 guia valvula std volvo genuine parts 1546437 genuine parts 1546437">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520846.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520846</span>
+<div class="preco">R$ 126,58</div>
+<div class="titulo">GUIA VALVULA STD VOLVO GENUINE PARTS 1546437</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022860-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520847 ap0019707-0061 conector macho p/tubo 8mm x 1/2&quot;bsp genuine parts pc08g04 genuine parts pc08g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520847.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520847</span>
+<div class="preco">R$ 12,64</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 8MM X 1/2&quot;BSP GENUINE PARTS PC08G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019707-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520848 ap0001762-0061 kit prisioneiro cubo traseiro completo volvo genuine parts genuine parts 1591028">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520848.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520848</span>
+<div class="preco">R$ 26,96</div>
+<div class="titulo">KIT PRISIONEIRO CUBO TRASEIRO COMPLETO VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001762-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520849 ap0012898-0061 conector macho tubo 10mmx1/8&quot; bsp genuine parts pc10g01 genuine parts pc10g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520849.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520849</span>
+<div class="preco">R$ 11,59</div>
+<div class="titulo">CONECTOR MACHO TUBO 10MMX1/8&quot; BSP GENUINE PARTS PC10G01</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012898-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520850 ap0022861-0061 sede valvula escape std scania genuine parts 232597 genuine parts 232597">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520850.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520850</span>
+<div class="preco">R$ 59,38</div>
+<div class="titulo">SEDE VALVULA ESCAPE STD SCANIA GENUINE PARTS 232597</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022861-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520851 ap0008518-0061 bolsa pneumatica cabine traseira volvo genuine parts genuine parts 20462622">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520851.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520851</span>
+<div class="preco">R$ 523,40</div>
+<div class="titulo">BOLSA PNEUMATICA CABINE TRASEIRA VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008518-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520852 ap0014847-0061 conector macho tubo 10mmx1/4&quot; bsp genuine parts pc10g02 genuine parts pc10g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520852.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520852</span>
+<div class="preco">R$ 20,96</div>
+<div class="titulo">CONECTOR MACHO TUBO 10MMX1/4&quot; BSP GENUINE PARTS PC10G02</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014847-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520853 ap0022862-0061 sensor pressao volvo genuine parts 85107132 genuine parts 85107132">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520853.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520853</span>
+<div class="preco">R$ 346,24</div>
+<div class="titulo">SENSOR PRESSAO VOLVO GENUINE PARTS 85107132</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022862-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520854 ap0020036-0061 conector macho p/tubo 10mm x 3/8&quot;bsp genuine parts pc10g03 genuine parts pc10g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520854.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520854</span>
+<div class="preco">R$ 17,36</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 10MM X 3/8&quot;BSP GENUINE PARTS PC10G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020036-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520855 ap0012694-0061 mangueira inferior radiador vw pesado genuine parts genuine parts 2r0121051">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520855.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520855</span>
+<div class="preco">R$ 527,35</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012694-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520856 ap0017213-0061 conector macho tubo 10mmx1/2&quot; bsp genuine parts pc10g04 genuine parts pc10g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520856.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520856</span>
+<div class="preco">R$ 18,44</div>
+<div class="titulo">CONECTOR MACHO TUBO 10MMX1/2&quot; BSP GENUINE PARTS PC10G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017213-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520857 ap0016874-0061 acabamento lateral parabrisa le scania genuine parts 1769911 genuine parts 1769911">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520857.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520857</span>
+<div class="preco">R$ 499,48</div>
+<div class="titulo">ACABAMENTO LATERAL PARABRISA LE SCANIA GENUINE PARTS 1769911</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016874-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520858 ap0015388-0061 conector macho p/tubo 12mm x 1/4&quot; bsp genuine parts pc12g02 genuine parts pc12g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520858.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520858</span>
+<div class="preco">R$ 21,83</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 12MM X 1/4&quot; BSP GENUINE PARTS PC12G02</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015388-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520859 ap1768869-0784 valvula saida po tampa filtro de ar vw constellation reserplastic 2s2129051">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520859.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520859</span>
+<div class="preco">R$ 22,22</div>
+<div class="titulo">VALVULA SAIDA PO TAMPA FILTRO DE AR VW CONSTELLATION</div>
+<div class="marca">RESERPLASTIC</div>
+<div class="sku">AP1768869-0784</div>
+</div></a></div>
+<div class="card placeholder" data-search="520860 ap0008088-0061 conector macho p/tubo 12mm x 3/8&quot; bsp genuine parts pc12g03 genuine parts pc12g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520860.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520860</span>
+<div class="preco">R$ 22,39</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 12MM X 3/8&quot; BSP GENUINE PARTS PC12G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008088-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520861 ap0010901-0061 sensor reto abs traseiro esquerdo 1425mm scania 1892049 genuine parts 1892049">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520861.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520861</span>
+<div class="preco">R$ 297,23</div>
+<div class="titulo">SENSOR RETO ABS TRASEIRO ESQUERDO 1425MM SCANIA 1892049</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010901-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520863 ap0010125-0061 conector macho p/tubo 12mm x 1/2&quot; bsp genuine parts pc12g04 genuine parts pc12g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520863.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520863</span>
+<div class="preco">R$ 41,99</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 12MM X 1/2&quot; BSP GENUINE PARTS PC12G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010125-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520864 ap0017613-0061 anel pino patim silicone verm./br521249 mb pesado 0039976948 genuine parts 0039976948">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520864.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520864</span>
+<div class="preco">R$ 1,55</div>
+<div class="titulo">ANEL PINO PATIM SILICONE VERM./BR521249 MB PESADO 0039976948</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017613-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520865 ap0022863-0061 conector macho tubo 14mm x 3/8&quot;bsp genuine parts pc14g03 genuine parts pc14g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520865.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520865</span>
+<div class="preco">R$ 46,80</div>
+<div class="titulo">CONECTOR MACHO TUBO 14MM X 3/8&quot;BSP GENUINE PARTS PC14G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022863-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520866 ap0004222-0061 valvula solenoide/apu 24v mb pesado genuine parts 0004204171 genuine parts 0004204171">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520866.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520866</span>
+<div class="preco">R$ 463,39</div>
+<div class="titulo">VALVULA SOLENOIDE/APU 24V MB PESADO GENUINE PARTS 0004204171</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004222-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520867 ap0015587-0061 conector macho tubo 14x 1/2&quot;bsp genuine parts pc14g04 genuine parts pc14g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520867.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520867</span>
+<div class="preco">R$ 45,06</div>
+<div class="titulo">CONECTOR MACHO TUBO 14X 1/2&quot;BSP GENUINE PARTS PC14G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015587-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520868 ap0017210-0061 reparo  compressor 75mm mb pesado genuine parts 0001308015 genuine parts 0001308015">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520868.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520868</span>
+<div class="preco">R$ 490,95</div>
+<div class="titulo">REPARO  COMPRESSOR 75MM MB PESADO GENUINE PARTS 0001308015</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017210-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520869 ap0022864-0061 conector macho p/tubo 16mm x 3/8&quot;bsp genuine parts pc16g03 genuine parts pc16g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520869.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520869</span>
+<div class="preco">R$ 54,84</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 16MM X 3/8&quot;BSP GENUINE PARTS PC16G03</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022864-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520870 ap0016316-0061 valvula solenoide acionamento freio motor/va mb pesado genuine parts 0004204971">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520870.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520870</span>
+<div class="preco">R$ 795,80</div>
+<div class="titulo">VALVULA SOLENOIDE ACIONAMENTO FREIO MOTOR/VA MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016316-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520871 ap0022865-0061 conector macho p/tubo 16mm x 1/2&quot;bsp genuine parts pc16g04 genuine parts pc16g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520871.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520871</span>
+<div class="preco">R$ 45,33</div>
+<div class="titulo">CONECTOR MACHO P/TUBO 16MM X 1/2&quot;BSP GENUINE PARTS PC16G04</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022865-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520872 ap0009710-0061 fole escapamento motor 3.1/2&quot;x325mm scania genuine parts genuine parts 232006">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520872.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520872</span>
+<div class="preco">R$ 1.382,00</div>
+<div class="titulo">FOLE ESCAPAMENTO MOTOR 3.1/2&quot;X325MM SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009710-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520873 ap0006264-0061 arruela compensasao (1.8) caixa satelite difer. mb pesado genuine parts 3273533052">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520873.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520873</span>
+<div class="preco">R$ 153,75</div>
+<div class="titulo">ARRUELA COMPENSASAO (1.8) CAIXA SATELITE DIFER. MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006264-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520874 ap0022866-0061 cotovelo macho giratorio p/tubo 4mm rosc genuine parts genuine parts pl04m5">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520874.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520874</span>
+<div class="preco">R$ 7,33</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 4MM ROSC GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022866-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520875 ap0005966-0061 chapa estabilizadora dianteira 265mm mb pesado genuine parts genuine parts 9793230116">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520875.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520875</span>
+<div class="preco">R$ 80,16</div>
+<div class="titulo">CHAPA ESTABILIZADORA DIANTEIRA 265MM MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005966-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520876 ap0017505-0061 rolamento  dianteira eixo ental. qj309 sep.bronze 45x genuine parts 3459817127">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520876.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520876</span>
+<div class="preco">R$ 359,49</div>
+<div class="titulo">ROLAMENTO  DIANTEIRA EIXO ENTAL. QJ309 SEP.BRONZE 45X</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017505-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520877 ap0019733-0061 cotovelo macho giratorio p/tubo 4mm rosc genuine parts genuine parts pl04m6">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520877.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520877</span>
+<div class="preco">R$ 5,10</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 4MM ROSC GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019733-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520878 ap0018933-0061 ajuste encosto banco passageiro scania genuine parts 1498848 genuine parts 1498848">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520878.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520878</span>
+<div class="preco">R$ 108,31</div>
+<div class="titulo">AJUSTE ENCOSTO BANCO PASSAGEIRO SCANIA GENUINE PARTS 1498848</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018933-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520879 ap0013488-0061 cotovelo macho giratorio p/tubo 4mm x 1/ genuine parts genuine parts pl04g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520879.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520879</span>
+<div class="preco">R$ 8,74</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 4MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013488-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520882 ap0017351-0061 cotovelo macho giratorio p/tubo 4mm x 1/ genuine parts genuine parts pl04g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520882.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520882</span>
+<div class="preco">R$ 10,30</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 4MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017351-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520883 ap0005707-0061 mangueira inferior radiador ford pesado genuine parts genuine parts 2c458286aa">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520883.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520883</span>
+<div class="preco">R$ 594,30</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005707-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520884 ap3858485-0061 lanterna tras.ld s/aba carreta genuine parts 100000162411 genuine parts 100000162411">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520884.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520884</span>
+<div class="preco">R$ 987,73</div>
+<div class="titulo">LANTERNA TRAS.LD S/ABA CARRETA GENUINE PARTS 100000162411</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP3858485-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520885 ap0017891-0061 cotovelo macho giratorio p/tubo 6mm rosc genuine parts genuine parts pl06m5">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520885.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520885</span>
+<div class="preco">R$ 8,04</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM ROSC GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017891-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520886 ap0012853-0061 mangueira superior radiador ford pesado genuine parts genuine parts 6c458260ac">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520886.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520886</span>
+<div class="preco">R$ 297,77</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012853-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520887 ap0014502-0061 tampa tanque comb.c/rosca/chave de aco e genuine parts genuine parts 500043667">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520887.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520887</span>
+<div class="preco">R$ 106,52</div>
+<div class="titulo">TAMPA TANQUE COMB.C/ROSCA/CHAVE DE ACO E GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014502-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520888 ap0022867-0061 cotovelo macho giratorio p/tubo 6mm rosc genuine parts genuine parts pl06m6">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520888.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520888</span>
+<div class="preco">R$ 11,01</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM ROSC GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022867-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520889 ap4214483-0061 lanterna tras.le s/aba carreta genuine parts 100000162405 genuine parts 100000162405">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520889.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520889</span>
+<div class="preco">R$ 987,49</div>
+<div class="titulo">LANTERNA TRAS.LE S/ABA CARRETA GENUINE PARTS 100000162405</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4214483-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520890 ap9178276-0061 mangueira superior radiador mb pesado genuine parts 520890 genuine parts 520890">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520890.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520890</span>
+<div class="preco">R$ 242,26</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR MB PESADO GENUINE PARTS 520890</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP9178276-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520891 ap0001935-0061 cotovelo macho giratorio p/tubo 6mm x 1/ genuine parts genuine parts pl06g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520891.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520891</span>
+<div class="preco">R$ 8,74</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001935-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520892 ap0012193-0061 suporte mola dianteiro esq e traseiro direito vw pesado genuine parts 2rr512338">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520892.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520892</span>
+<div class="preco">R$ 1.656,16</div>
+<div class="titulo">SUPORTE MOLA DIANTEIRO ESQ E TRASEIRO DIREITO VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012193-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520893 ap0009518-0061 tampa caixa bateria plastico genuine parts 500318410 genuine parts 500318410">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520893.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520893</span>
+<div class="preco">R$ 365,87</div>
+<div class="titulo">TAMPA CAIXA BATERIA PLASTICO GENUINE PARTS 500318410</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009518-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520894 ap0005684-0061 cotovelo macho giratorio p/tubo 6mm x 1/ genuine parts genuine parts pl06g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520894.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520894</span>
+<div class="preco">R$ 10,90</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005684-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520895 ap0008818-0061 suporte mola dianteiro direcao e traseiro esquerdo vw pesado genuine parts 2rr512337">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520895.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520895</span>
+<div class="preco">R$ 1.656,16</div>
+<div class="titulo">SUPORTE MOLA DIANTEIRO DIRECAO E TRASEIRO ESQUERDO VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008818-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520896 ap0005067-0061 suporte alternador mb pesado genuine parts 9061503870 genuine parts 9061503870">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520896.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520896</span>
+<div class="preco">R$ 788,01</div>
+<div class="titulo">SUPORTE ALTERNADOR MB PESADO GENUINE PARTS 9061503870</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005067-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520897 ap0016950-0061 cotovelo macho giratorio p/tubo 6mm x 3/ genuine parts genuine parts pl06g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520897.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520897</span>
+<div class="preco">R$ 15,72</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM X 3/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016950-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520898 ap0003782-0061 tampa tanque expansao volvo genuine parts 21360115 genuine parts 21360115">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520898.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520898</span>
+<div class="preco">R$ 257,42</div>
+<div class="titulo">TAMPA TANQUE EXPANSAO VOLVO GENUINE PARTS 21360115</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003782-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520899 ap0020112-0061 cotovelo macho giratorio p/tubo 6mm x 1/ genuine parts genuine parts pl06g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520899.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520899</span>
+<div class="preco">R$ 13,10</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 6MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020112-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520900 ap0007139-0061 sensor pressao valvula cambio volvo genuine parts 20562642 genuine parts 20562642">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520900.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520900</span>
+<div class="preco">R$ 376,66</div>
+<div class="titulo">SENSOR PRESSAO VALVULA CAMBIO VOLVO GENUINE PARTS 20562642</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007139-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520901 ap0014999-0061 mangueira superior radiador ford pesado genuine parts genuine parts 2c458260ab">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520901.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520901</span>
+<div class="preco">R$ 312,02</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR FORD PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014999-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520902 ap0007222-0061 cotovelo macho giratorio p/tubo 8mm x 1/ genuine parts genuine parts pl08g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520902.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520902</span>
+<div class="preco">R$ 9,61</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 8MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007222-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520903 ap0006942-0061 sensor reto ebs traseiro 2675mm scania genuine parts 1892058 genuine parts 1892058">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520903.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520903</span>
+<div class="preco">R$ 293,33</div>
+<div class="titulo">SENSOR RETO EBS TRASEIRO 2675MM SCANIA GENUINE PARTS 1892058</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006942-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520904 ap0008987-0061 mangueira direcao hidr.reservatorio bomb vw pesado 2t2422892 genuine parts 2t2422892">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520904.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520904</span>
+<div class="preco">R$ 122,88</div>
+<div class="titulo">MANGUEIRA DIRECAO HIDR.RESERVATORIO BOMB VW PESADO 2T2422892</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008987-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520905 ap0006412-0061 cotovelo macho giratorio p/tubo 8mm x 1/ genuine parts genuine parts pl08g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520905.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520905</span>
+<div class="preco">R$ 8,55</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 8MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006412-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520906 ap0005799-0061 sensor freio abs scania genuine parts 1892051 genuine parts 1892051">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520906.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520906</span>
+<div class="preco">R$ 345,79</div>
+<div class="titulo">SENSOR FREIO ABS SCANIA GENUINE PARTS 1892051</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005799-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520907 ap0001910-0061 kit reparo tubo banco scania genuine parts 1498894 genuine parts 1498894">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520907.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520907</span>
+<div class="preco">R$ 453,37</div>
+<div class="titulo">KIT REPARO TUBO BANCO SCANIA GENUINE PARTS 1498894</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001910-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520908 ap0017155-0061 cotovelo macho giratorio p/tubo 8mm x 3/ genuine parts genuine parts pl08g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520908.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520908</span>
+<div class="preco">R$ 14,35</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 8MM X 3/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017155-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520909 ap0012936-0061 mangueira filtro ar vw pesado genuine parts 2s0129627 genuine parts 2s0129627">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520909.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520909</span>
+<div class="preco">R$ 1.478,24</div>
+<div class="titulo">MANGUEIRA FILTRO AR VW PESADO GENUINE PARTS 2S0129627</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012936-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520910 ap0005912-0061 sensor temperatura retarder scania genuine parts 1881331 genuine parts 1881331">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520910.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520910</span>
+<div class="preco">R$ 370,03</div>
+<div class="titulo">SENSOR TEMPERATURA RETARDER SCANIA GENUINE PARTS 1881331</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005912-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520911 ap0020047-0061 cotovelo macho giratorio p/tubo 8mm x 1/ genuine parts genuine parts pl08g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520911.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520911</span>
+<div class="preco">R$ 16,41</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 8MM X 1/ GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020047-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520912 ap0022868-0061 mangueira tubo intermediario ao filtro d ford pesado genuine parts tmg129625">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520912.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520912</span>
+<div class="preco">R$ 802,16</div>
+<div class="titulo">MANGUEIRA TUBO INTERMEDIARIO AO FILTRO D FORD PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022868-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520913 ap0010224-0061 sensor rotacao vw pesado genuine parts 07w927803 genuine parts 07w927803">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520913.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520913</span>
+<div class="preco">R$ 122,25</div>
+<div class="titulo">SENSOR ROTACAO VW PESADO GENUINE PARTS 07W927803</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010224-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520914 ap0014966-0061 cotovelo macho giratorio p/tubo 10mm x 1 genuine parts genuine parts pl10g01">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520914.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520914</span>
+<div class="preco">R$ 16,41</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 10MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014966-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520915 ap0009587-0061 mangueira inferior radiador motor cummin vw pesado genuine parts 2u2121103a">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520915.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520915</span>
+<div class="preco">R$ 134,61</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR MOTOR CUMMIN VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009587-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520916 ap0003047-0061 cabo trambulacao cambio c/term. 10750mm mb pesado 3822600451 genuine parts 3822600451">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520916.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520916</span>
+<div class="preco">R$ 1.379,66</div>
+<div class="titulo">CABO TRAMBULACAO CAMBIO C/TERM. 10750MM MB PESADO 3822600451</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003047-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520917 ap0006679-0061 cotovelo macho giratorio p/tubo 10mm x 1 genuine parts genuine parts pl10g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520917.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520917</span>
+<div class="preco">R$ 10,97</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 10MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006679-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520918 ap0017938-0061 junta trambulador alavanca cambio scania genuine parts genuine parts 387312">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520918.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520918</span>
+<div class="preco">R$ 10,77</div>
+<div class="titulo">JUNTA TRAMBULADOR ALAVANCA CAMBIO SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017938-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520920 ap0011783-0061 cotovelo macho giratorio p/tubo 10mm x 3 genuine parts genuine parts pl10g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520920.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520920</span>
+<div class="preco">R$ 13,27</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 10MM X 3 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011783-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520921 ap0016291-0061 sensor pressao modulo ebs scania genuine parts 1898652 genuine parts 1898652">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520921.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520921</span>
+<div class="preco">R$ 343,20</div>
+<div class="titulo">SENSOR PRESSAO MODULO EBS SCANIA GENUINE PARTS 1898652</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016291-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520922 ap0019911-0061 cotovelo macho giratorio p/tubo 10mm x 1 genuine parts genuine parts pl10g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520922.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520922</span>
+<div class="preco">R$ 20,78</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 10MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019911-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520923 ap0016477-0061 mangueira enchimento oleo vw pesado genuine parts 2u2115617a genuine parts 2u2115617a">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520923.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520923</span>
+<div class="preco">R$ 304,29</div>
+<div class="titulo">MANGUEIRA ENCHIMENTO OLEO VW PESADO GENUINE PARTS 2U2115617A</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016477-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520925 ap0008237-0061 cotovelo macho giratorio p/tubo 12mm x 1 genuine parts genuine parts pl12g02">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520925.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520925</span>
+<div class="preco">R$ 13,61</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 12MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008237-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520926 ap0017258-0061 mangueira radiador vw pesado genuine parts 2t212101q genuine parts 2t212101q">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520926.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520926</span>
+<div class="preco">R$ 248,55</div>
+<div class="titulo">MANGUEIRA RADIADOR VW PESADO GENUINE PARTS 2T212101Q</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017258-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520927 ap0012540-0061 cotovelo macho giratorio p/tubo 12mm x 3 genuine parts genuine parts pl12g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520927.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520927</span>
+<div class="preco">R$ 14,71</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 12MM X 3 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012540-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520928 ap0009989-0061 parafuso de roda traseiro  m18x1,5x100 (recartilhado) c/fr genuine parts 6008009707008">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520928.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520928</span>
+<div class="preco">R$ 50,09</div>
+<div class="titulo">PARAFUSO DE RODA TRASEIRO  M18X1,5X100 (RECARTILHADO) C/FR</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009989-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520930 ap0016082-0061 cotovelo macho giratorio p/tubo 12mm x 1 genuine parts genuine parts pl12g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520930.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520930</span>
+<div class="preco">R$ 13,94</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 12MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016082-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520932 ap0013708-0061 mangueira filtro ar seco vw pesado genuine parts 2vh129973 genuine parts 2vh129973">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520932.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520932</span>
+<div class="preco">R$ 1.168,03</div>
+<div class="titulo">MANGUEIRA FILTRO AR SECO VW PESADO GENUINE PARTS 2VH129973</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013708-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520933 ap0022869-0061 cotovelo macho giratorio p/tubo 16mm x 3 genuine parts genuine parts pl16g03">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520933.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520933</span>
+<div class="preco">R$ 51,24</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 16MM X 3 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022869-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520935 ap0012917-0061 parafuso de roda dianteira m18x1,5x90 (recartilhado) c/fresa genuine parts 6020008017008">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520935.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520935</span>
+<div class="preco">R$ 24,17</div>
+<div class="titulo">PARAFUSO DE RODA DIANTEIRA M18X1,5X90 (RECARTILHADO) C/FRESA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012917-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520936 ap0022870-0061 cotovelo macho giratorio p/tubo 16mm x 1 genuine parts genuine parts pl16g04">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520936.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520936</span>
+<div class="preco">—</div>
+<div class="titulo">COTOVELO MACHO GIRATORIO P/TUBO 16MM X 1 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022870-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520937 ap0010337-0061 polia estic.lisa ferro c/rolamento 1ªlinha mb pesado genuine parts 0005501633">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520937.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520937</span>
+<div class="preco">R$ 874,50</div>
+<div class="titulo">POLIA ESTIC.LISA FERRO C/ROLAMENTO 1ªLINHA MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010337-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520938 ap9436471-0061 kit rolamento coluna direcao vw worker antigos importado genuine parts 2rd498505">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520938.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520938</span>
+<div class="preco">R$ 282,32</div>
+<div class="titulo">KIT ROLAMENTO COLUNA DIRECAO VW WORKER ANTIGOS IMPORTADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP9436471-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520940 ap0002221-0061 polia desv.correia aco c/rolamento tinkem mb pesado genuine parts 0005501933">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520940.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520940</span>
+<div class="preco">R$ 468,91</div>
+<div class="titulo">POLIA DESV.CORREIA ACO C/ROLAMENTO TINKEM MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002221-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520941 ap0005762-0061 martelo p/bater pneu (borracha rigida) genuine parts 520941 genuine parts 520941">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520941.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520941</span>
+<div class="preco">R$ 35,73</div>
+<div class="titulo">MARTELO P/BATER PNEU (BORRACHA RIGIDA) GENUINE PARTS 520941</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005762-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520942 ap0020302-0061 conexao cotovelo plastico 04mm genuine parts 520942 genuine parts 520942">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520942.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520942</span>
+<div class="preco">R$ 2,27</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 04MM GENUINE PARTS 520942</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020302-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520943 ap0019204-0061 anel eixo tandem 110x3mm scania genuine parts 368033 genuine parts 368033">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520943.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520943</span>
+<div class="preco">R$ 8,10</div>
+<div class="titulo">ANEL EIXO TANDEM 110X3MM SCANIA GENUINE PARTS 368033</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019204-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520944 ap0022871-0061 filtro oleo lubrificante refil .500 mb pesado genuine parts genuine parts 5411800209">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520944.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520944</span>
+<div class="preco">R$ 105,06</div>
+<div class="titulo">FILTRO OLEO LUBRIFICANTE REFIL .500 MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022871-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520945 ap0010505-0061 tubo de ferro c/borracha (interno 15mm) vw pesado 07w121133 genuine parts 07w121133">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520945.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520945</span>
+<div class="preco">R$ 93,54</div>
+<div class="titulo">TUBO DE FERRO C/BORRACHA (INTERNO 15MM) VW PESADO 07W121133</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010505-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520946 ap0016212-0061 conexao cotovelo plastico 06mm genuine parts 520946 genuine parts 520946">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520946.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520946</span>
+<div class="preco">R$ 2,59</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 06MM GENUINE PARTS 520946</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016212-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520947 ap2360356-0061 anel vedacao tampa eixo interm.100x3mm viton mb pesado genuine parts 0289972348">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520947.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520947</span>
+<div class="preco">R$ 9,38</div>
+<div class="titulo">ANEL VEDACAO TAMPA EIXO INTERM.100X3MM VITON MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2360356-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520948 ap0009327-0061 farol auxiliar ld scania genuine parts 2552712 genuine parts 2552712">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520948.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520948</span>
+<div class="preco">R$ 995,46</div>
+<div class="titulo">FAROL AUXILIAR LD SCANIA GENUINE PARTS 2552712</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009327-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520949 ap0017089-0061 conexao cotovelo plastico 08mm genuine parts 520949 genuine parts 520949">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520949.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520949</span>
+<div class="preco">R$ 2,97</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 08MM GENUINE PARTS 520949</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017089-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520950 ap0006163-0061 haste reacao &quot;v&quot; angular vw pesado genuine parts 2u0511441 genuine parts 2u0511441">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520950.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520950</span>
+<div class="preco">R$ 2.557,31</div>
+<div class="titulo">HASTE REACAO &quot;V&quot; ANGULAR VW PESADO GENUINE PARTS 2U0511441</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006163-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520951 ap4438820-0061 farol auxiliar le scania genuine parts 255711 genuine parts 255711">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520951.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520951</span>
+<div class="preco">R$ 874,53</div>
+<div class="titulo">FAROL AUXILIAR LE SCANIA GENUINE PARTS 255711</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP4438820-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520952 ap0016680-0061 conexao cotovelo plastico 10mm genuine parts 520952 genuine parts 520952">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520952.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520952</span>
+<div class="preco">R$ 3,56</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 10MM GENUINE PARTS 520952</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016680-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520953 ap0016150-0061 mangueira inferior radiador scania genuine parts 1755954 genuine parts 1755954">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520953.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520953</span>
+<div class="preco">R$ 48,37</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR SCANIA GENUINE PARTS 1755954</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016150-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520954 ap0005587-0061 anel vedacao moringa viton verde 84x3 scania genuine parts genuine parts 1503399">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520954.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520954</span>
+<div class="preco">R$ 32,24</div>
+<div class="titulo">ANEL VEDACAO MORINGA VITON VERDE 84X3 SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005587-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520955 ap0013264-0061 conexao cotovelo plastico 12mm genuine parts 520955 genuine parts 520955">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520955.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520955</span>
+<div class="preco">R$ 6,11</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 12MM GENUINE PARTS 520955</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013264-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520956 ap0014622-0061 mangueira tubo compressor ar 25x36x1280m mb pesado genuine parts 900271025023">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520956.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520956</span>
+<div class="preco">R$ 361,96</div>
+<div class="titulo">MANGUEIRA TUBO COMPRESSOR AR 25X36X1280M MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014622-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520957 ap0004368-0061 valvula rele emergencia re-4 4 saidas m1 carreta 3894298444 genuine parts 3894298444">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520957.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520957</span>
+<div class="preco">R$ 1.130,62</div>
+<div class="titulo">VALVULA RELE EMERGENCIA RE-4 4 SAIDAS M1 CARRETA 3894298444</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004368-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520958 ap0019330-0061 conexao cotovelo plastico 14mm genuine parts 520958 genuine parts 520958">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520958.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520958</span>
+<div class="preco">R$ 16,41</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 14MM GENUINE PARTS 520958</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019330-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520959 ap0001994-0061 mecanismo ajuste principal pinca freio mb pesado 6964205301 genuine parts 6964205301">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520959.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520959</span>
+<div class="preco">R$ 635,90</div>
+<div class="titulo">MECANISMO AJUSTE PRINCIPAL PINCA FREIO MB PESADO 6964205301</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001994-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520961 ap0020411-0061 conexao cotovelo plastico 16mm genuine parts 520961 genuine parts 520961">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520961.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520961</span>
+<div class="preco">R$ 10,77</div>
+<div class="titulo">CONEXAO COTOVELO PLASTICO 16MM GENUINE PARTS 520961</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020411-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520963 ap0020467-0061 forquilha acelerador 5/16&quot; volvo genuine parts 961786 genuine parts 961786">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520963.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520963</span>
+<div class="preco">R$ 19,14</div>
+<div class="titulo">FORQUILHA ACELERADOR 5/16&quot; VOLVO GENUINE PARTS 961786</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020467-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520964 ap0017512-0061 conexao tee plastica p/tubo 04mm genuine parts 520964 genuine parts 520964">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520964.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520964</span>
+<div class="preco">R$ 3,85</div>
+<div class="titulo">CONEXAO TEE PLASTICA P/TUBO 04MM GENUINE PARTS 520964</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017512-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520965 ap0006002-0061 mangueira compressor 16x23x110mm scania genuine parts genuine parts 1379861">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520965.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520965</span>
+<div class="preco">R$ 38,36</div>
+<div class="titulo">MANGUEIRA COMPRESSOR 16X23X110MM SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006002-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520966 ap0010840-0061 bucha telescopio trambulador cambio genuine parts 41011049 genuine parts 41011049">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520966.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520966</span>
+<div class="preco">R$ 65,28</div>
+<div class="titulo">BUCHA TELESCOPIO TRAMBULADOR CAMBIO GENUINE PARTS 41011049</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010840-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520967 ap0003146-0061 conjunto esticador cinta tq (parafuso + 3 p volvo 1629316 genuine parts 1629316">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520967.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520967</span>
+<div class="preco">R$ 226,40</div>
+<div class="titulo">CONJUNTO ESTICADOR CINTA TQ (PARAFUSO + 3 P VOLVO 1629316</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003146-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520970 ap0001555-0061 mangueira superior radiador volvo genuine parts 21390591 genuine parts 21390591">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520970.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520970</span>
+<div class="preco">R$ 235,55</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR VOLVO GENUINE PARTS 21390591</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001555-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520971 ap0011091-0061 conexao p/espiral limpeza od.8mm x 1/4&quot;n genuine parts genuine parts 520971">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520971.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520971</span>
+<div class="preco">R$ 20,33</div>
+<div class="titulo">CONEXAO P/ESPIRAL LIMPEZA OD.8MM X 1/4&quot;N GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011091-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520972 ap0018720-0061 parafuso garfo reduzida diferencial scania genuine parts genuine parts 1451749">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520972.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520972</span>
+<div class="preco">R$ 12,22</div>
+<div class="titulo">PARAFUSO GARFO REDUZIDA DIFERENCIAL SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018720-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520973 ap0010321-0061 lente lanterna traseira do br 516083/516 mb pesado genuine parts 0035443203">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520973.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520973</span>
+<div class="preco">R$ 149,01</div>
+<div class="titulo">LENTE LANTERNA TRASEIRA DO BR 516083/516 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010321-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520974 ap0022872-0061 adaptador p/espiral longo macho m18x1,50 genuine parts genuine parts 520974">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520974.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520974</span>
+<div class="preco">R$ 25,50</div>
+<div class="titulo">ADAPTADOR P/ESPIRAL LONGO MACHO M18X1,50 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022872-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520975 ap0016056-0061 mangueira inferior radiador volvo genuine parts 20733728 genuine parts 20733728">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520975.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520975</span>
+<div class="preco">R$ 103,24</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR VOLVO GENUINE PARTS 20733728</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016056-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520976 ap0022873-0061 fechadura porta direita genuine parts 504096682 genuine parts 504096682">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520976.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520976</span>
+<div class="preco">R$ 345,79</div>
+<div class="titulo">FECHADURA PORTA DIREITA GENUINE PARTS 504096682</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022873-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520977 ap0017585-0061 conexao uniao plastica 5/16&quot; genuine parts 520977 genuine parts 520977">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520977.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520977</span>
+<div class="preco">R$ 5,03</div>
+<div class="titulo">CONEXAO UNIAO PLASTICA 5/16&quot; GENUINE PARTS 520977</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017585-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520979 ap0017319-0061 fechadura porta esquerda genuine parts 504096683 genuine parts 504096683">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520979.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520979</span>
+<div class="preco">R$ 345,79</div>
+<div class="titulo">FECHADURA PORTA ESQUERDA GENUINE PARTS 504096683</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017319-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520980 ap0006816-0061 niple sangria combustivel scania genuine parts 1515099 genuine parts 1515099">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520980.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520980</span>
+<div class="preco">R$ 261,64</div>
+<div class="titulo">NIPLE SANGRIA COMBUSTIVEL SCANIA GENUINE PARTS 1515099</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006816-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520981 ap0016575-0061 conector macho eng.rapido 10mm x 1/2&quot;bsp genuine parts genuine parts 520981">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520981.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520981</span>
+<div class="preco">R$ 25,56</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 10MM X 1/2&quot;BSP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016575-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520982 ap0006140-0061 maquina vidro manual ld genuine parts 2997185 genuine parts 2997185">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520982.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520982</span>
+<div class="preco">R$ 326,76</div>
+<div class="titulo">MAQUINA VIDRO MANUAL LD GENUINE PARTS 2997185</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006140-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520983 ap0011736-0061 anel vedacao radiador oleo volvo genuine parts 967343 genuine parts 967343">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520983.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520983</span>
+<div class="preco">R$ 5,41</div>
+<div class="titulo">ANEL VEDACAO RADIADOR OLEO VOLVO GENUINE PARTS 967343</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011736-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520984 ap0015708-0061 conector macho eng.rapido 10mm x 1/4&quot;bsp vw pesado 520984 genuine parts 520984">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520984.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520984</span>
+<div class="preco">R$ 14,42</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 10MM X 1/4&quot;BSP VW PESADO 520984</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015708-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520985 ap0006365-0061 maquina vidro manual le genuine parts 2997186 genuine parts 2997186">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520985.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520985</span>
+<div class="preco">R$ 326,76</div>
+<div class="titulo">MAQUINA VIDRO MANUAL LE GENUINE PARTS 2997186</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0006365-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520986 ap0003442-0061 manopla (so a bolinha) alav tramb cambio mb sprinter genuine parts 9062600198">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520986.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520986</span>
+<div class="preco">R$ 118,76</div>
+<div class="titulo">MANOPLA (SO A BOLINHA) ALAV TRAMB CAMBIO MB SPRINTER</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003442-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520987 ap0022874-0061 conector macho eng.rapido 10mm x 1/8&quot;bsp genuine parts genuine parts 520987">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520987.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520987</span>
+<div class="preco">R$ 14,25</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 10MM X 1/8&quot;BSP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022874-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520988 ap5134764-0061 pivo bandeja mb sprinter 415 515 2012/... genuine parts genuine parts 9063304007">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520988.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520988</span>
+<div class="preco">R$ 175,78</div>
+<div class="titulo">PIVO BANDEJA MB SPRINTER 415 515 2012/... GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP5134764-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520989 ap0012219-0061 reparo  reduzida cambio mb pesado genuine parts 0069976447 genuine parts 0069976447">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520989.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520989</span>
+<div class="preco">R$ 204,89</div>
+<div class="titulo">REPARO  REDUZIDA CAMBIO MB PESADO GENUINE PARTS 0069976447</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012219-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520990 ap0013942-0061 conexao engate rapido p/servo embreagem mb pesado 0019975171 genuine parts 0019975171">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520990.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520990</span>
+<div class="preco">R$ 63,74</div>
+<div class="titulo">CONEXAO ENGATE RAPIDO P/SERVO EMBREAGEM MB PESADO 0019975171</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013942-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520991 ap0001747-0061 tampa tanque expansao volvo genuine parts 21884469 genuine parts 21884469">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520991.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520991</span>
+<div class="preco">R$ 222,84</div>
+<div class="titulo">TAMPA TANQUE EXPANSAO VOLVO GENUINE PARTS 21884469</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001747-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520992 ap0018246-0061 reparo  parcial valvula pedal volvo genuine parts 6889506 genuine parts 6889506">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520992.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520992</span>
+<div class="preco">R$ 150,72</div>
+<div class="titulo">REPARO  PARCIAL VALVULA PEDAL VOLVO GENUINE PARTS 6889506</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018246-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520993 ap0004708-0061 suporte aranha freio traseiro vw pesado genuine parts genuine parts tak607105">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520993.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520993</span>
+<div class="preco">R$ 1.362,59</div>
+<div class="titulo">SUPORTE ARANHA FREIO TRASEIRO VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004708-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520994 ap0017115-0061 conector macho eng.rapido 10mm x 3/8&quot;bsp genuine parts genuine parts 520994">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520994.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520994</span>
+<div class="preco">R$ 13,55</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 10MM X 3/8&quot;BSP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017115-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520996 ap0012692-0061 mancal pino balanca interno furo 50mm mb pesado 3453203350 genuine parts 3453203350">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520996.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520996</span>
+<div class="preco">R$ 211,63</div>
+<div class="titulo">MANCAL PINO BALANCA INTERNO FURO 50MM MB PESADO 3453203350</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012692-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520997 ap0015060-0061 conector macho eng.rapido 12mm x 1/2&quot;bsp genuine parts genuine parts 520997">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520997.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520997</span>
+<div class="preco">R$ 16,77</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 12MM X 1/2&quot;BSP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0015060-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520998 ap0003740-0061 reparo  vedacao retarder scania genuine parts 1900052 genuine parts 1900052">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520998.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520998</span>
+<div class="preco">R$ 632,55</div>
+<div class="titulo">REPARO  VEDACAO RETARDER SCANIA GENUINE PARTS 1900052</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003740-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="520999 ap0017162-0061 mancal quadrado pino balanca furo 60mm mb pesado 3453203350 genuine parts 3453203350">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/520999.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">520999</span>
+<div class="preco">R$ 223,02</div>
+<div class="titulo">MANCAL QUADRADO PINO BALANCA FURO 60MM MB PESADO 3453203350</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017162-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="521000 ap0014304-0061 conector macho eng.rapido 12mm x 1/4&quot;bsp genuine parts genuine parts 521000">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/521000.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">521000</span>
+<div class="preco">R$ 13,91</div>
+<div class="titulo">CONECTOR MACHO ENG.RAPIDO 12MM X 1/4&quot;BSP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014304-0061</div>
+</div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
+const inp = document.getElementById('q');
+const cards = document.querySelectorAll('.card');
+const stat = document.getElementById('stat');
+const btnTodos = document.getElementById('f-todos');
+const btnReais = document.getElementById('f-reais');
+const btnPlace = document.getElementById('f-place');
+let filtro = 'todos'; // 'todos' | 'reais' | 'placeholders'
+
+function aplicarFiltros() {
+    const q = inp.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(c => {
+        const txt = c.dataset.search;
+        const isPlace = c.classList.contains('placeholder');
+        const passaBusca = !q || txt.includes(q);
+        const passaFiltro = filtro === 'todos' || (filtro === 'reais' && !isPlace) || (filtro === 'placeholders' && isPlace);
+        const show = passaBusca && passaFiltro;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    stat.textContent = visible + ' / ' + cards.length + ' itens';
+}
+
+inp.addEventListener('input', aplicarFiltros);
+
+function setFiltro(novo, btnAtivo) {
+    filtro = novo;
+    [btnTodos, btnReais, btnPlace].forEach(b => b.classList.remove('active'));
+    btnAtivo.classList.add('active');
+    aplicarFiltros();
+}
+btnTodos.addEventListener('click', () => setFiltro('todos', btnTodos));
+btnReais.addEventListener('click', () => setFiltro('reais', btnReais));
+btnPlace.addEventListener('click', () => setFiltro('placeholders', btnPlace));
+</script></body></html>

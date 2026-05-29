@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Bloco 011001-012000 | Anchieta Pe&ccedil;as ML</title>
+<meta property="og:title" content="Bloco 011001-012000 &middot; Anchieta Pe&ccedil;as">
+<meta property="og:description" content="75 produtos da Fonte BR Company">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #003366; color: white; padding: 1rem 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
+.toolbar { background: white; padding: .75rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar input { padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: .9rem; min-width: 240px; }
+.toolbar .stat { font-size: .85rem; color: #6b7280; }
+.toolbar button { padding: .5rem .85rem; border: 1px solid #d1d5db; border-radius: 6px; background: white; cursor: pointer; font-size: .85rem; transition: all .15s; }
+.toolbar button:hover { background: #f3f4f6; }
+.toolbar button.active { background: #003366; color: white; border-color: #003366; }
+.toolbar button.warn { border-color: #f59e0b; color: #b45309; }
+.toolbar button.warn.active { background: #f59e0b; color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); overflow: hidden; transition: transform .15s, box-shadow .15s; position: relative; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card a { color: inherit; text-decoration: none; display: block; }
+.card.placeholder { border: 2px solid #f59e0b; }
+.card .badge-placeholder { position: absolute; top: 8px; right: 8px; background: #f59e0b; color: white; font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+.thumb { width: 100%; height: 180px; background: #f3f4f6 center / contain no-repeat; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: .8rem; }
+.thumb.placeholder-bg { opacity: .55; filter: grayscale(.4); }
+.no-img { background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px); }
+.body { padding: .75rem; }
+.cod { font-family: monospace; background: #003366; color: white; font-size: .75rem; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.card.placeholder .cod { background: #f59e0b; font-size: 1rem; padding: 5px 10px; font-weight: 700; letter-spacing: .04em; }
+.preco { color: #10b981; font-weight: 600; font-size: 1.05rem; margin: .25rem 0; }
+.titulo { font-size: .85rem; line-height: 1.3; margin: .25rem 0; min-height: 2.4em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.marca { color: #6b7280; font-size: .75rem; }
+.sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
+.card.placeholder .sku { color: #b45309; font-weight: 600; }
+
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
+/* Pagina individual SKU */
+.detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.detail-grid .photos img { width: 100%; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e5e7eb; }
+.detail h2 { margin-top: 0; }
+.detail .preco-big { font-size: 2rem; color: #10b981; font-weight: 700; margin: 1rem 0; }
+.detail .field { margin-bottom: .75rem; }
+.detail .field label { font-size: .8rem; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+.detail .field .val { font-size: .95rem; margin-top: .15rem; }
+.detail pre.desc { background: #f9fafb; padding: 1rem; border-radius: 6px; white-space: pre-wrap; font-family: inherit; font-size: .9rem; line-height: 1.5; border-left: 3px solid #003366; }
+.back { display: inline-block; margin-bottom: 1rem; color: #003366; text-decoration: none; font-size: .9rem; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+</style></head><body>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Bloco 011001-012000 &middot; Anchieta Pe&ccedil;as</h1>
+    <div class="meta"><a href="../index.html" style="color:#cbd5e1;">&larr; voltar ao &iacute;ndice</a> &middot; 75 produtos &middot; 0 com foto real &middot; 75 gen&eacute;ricas</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Bloco 011001-012000
+75 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/011001-012000.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Anchieta bloco 011001&body=Anchieta Peças - Bloco 011001-012000
+75 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/011001-012000.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
+<div class="toolbar">
+<input type="search" id="q" placeholder="Buscar neste bloco...">
+<button id="f-todos" class="active">Todos (75)</button>
+<button id="f-reais">Com foto real (0)</button>
+<button id="f-place" class="warn">S&oacute; gen&eacute;ricas (75)</button>
+<div class="stat" id="stat">75 / 75 itens</div>
+</div>
+<div class="grid">
+<div class="card placeholder" data-search="011028 ap6002723-0061 valvula drenagem automatica rosca mb pesado genuine parts genuine parts 3844327207">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011028.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011028</span>
+<div class="preco">R$ 249,38</div>
+<div class="titulo">VALVULA DRENAGEM AUTOMATICA ROSCA MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP6002723-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011036 ap9470273-0282 mangueira inferior radiador-d/i-35mm mb pesado elbor elbor 6855013782">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011036.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011036</span>
+<div class="preco">R$ 100,46</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR-D/I-35MM MB PESADO ELBOR</div>
+<div class="marca">ELBOR</div>
+<div class="sku">AP9470273-0282</div>
+</div></a></div>
+<div class="card placeholder" data-search="011040 ap2608390-0061 jg reparo caneca reduzida 6/8 marchas c/bucha scania genuine parts 1484809x">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011040.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011040</span>
+<div class="preco">R$ 34,61</div>
+<div class="titulo">JG REPARO CANECA REDUZIDA 6/8 MARCHAS C/BUCHA SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2608390-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011050 ap0001891-0061 interruptor reduzida eletrica c/chicote vw pesado tjg972355 genuine parts tjg972355">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011050.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011050</span>
+<div class="preco">R$ 217,86</div>
+<div class="titulo">INTERRUPTOR REDUZIDA ELETRICA C/CHICOTE VW PESADO TJG972355</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001891-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011057 ap8144900-0282 mangueira inferior radiador mb 709 710 809 912 mb pesado elbor 6885017882">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011057.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011057</span>
+<div class="preco">R$ 55,03</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR MB 709 710 809 912 MB PESADO</div>
+<div class="marca">ELBOR</div>
+<div class="sku">AP8144900-0282</div>
+</div></a></div>
+<div class="card placeholder" data-search="011058 ap0016177-0061 mangueira compressor ar 400mm mb pesado genuine parts genuine parts 074310017502">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011058.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011058</span>
+<div class="preco">R$ 34,82</div>
+<div class="titulo">MANGUEIRA COMPRESSOR AR 400MM MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016177-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011059 ap0004778-0061 rolamento manga pino esfer.eixo 45x74x20 mb pesado genuine parts 0009818318">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011059.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011059</span>
+<div class="preco">R$ 85,58</div>
+<div class="titulo">ROLAMENTO MANGA PINO ESFER.EIXO 45X74X20 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004778-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011060 ap0008637-0061 mangueira radiador reservatorio agua 12x24x130 mb pesado genuine parts 900271012083">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011060.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011060</span>
+<div class="preco">R$ 87,47</div>
+<div class="titulo">MANGUEIRA RADIADOR RESERVATORIO AGUA 12X24X130 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008637-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011061 ap0018306-0061 cotovelo macho freio a ar 1/4&quot;x 1/8&quot;npt scania genuine parts genuine parts 139288">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011061.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011061</span>
+<div class="preco">R$ 26,06</div>
+<div class="titulo">COTOVELO MACHO FREIO A AR 1/4&quot;X 1/8&quot;NPT SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018306-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011062 ap0004861-0061 trava capo scania genuine parts 1511871 genuine parts 1511871">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011062.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011062</span>
+<div class="preco">R$ 207,05</div>
+<div class="titulo">TRAVA CAPO SCANIA GENUINE PARTS 1511871</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004861-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011063 ap0009663-0061 sensor pressao oleo vw pesado genuine parts 2rd919081 genuine parts 2rd919081">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011063.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011063</span>
+<div class="preco">R$ 55,53</div>
+<div class="titulo">SENSOR PRESSAO OLEO VW PESADO GENUINE PARTS 2RD919081</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009663-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011070 ap0003025-0061 tirante valvula cabine tr(prisioneiro 56mm) scania 1386424 genuine parts 1386424">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011070.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011070</span>
+<div class="preco">R$ 51,93</div>
+<div class="titulo">TIRANTE VALVULA CABINE TR(PRISIONEIRO 56MM) SCANIA 1386424</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003025-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011089 ap0004674-0061 mola patim freio dianteira/traseiro (maior)220mm vw pesado genuine parts te3607039">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011089.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011089</span>
+<div class="preco">R$ 22,70</div>
+<div class="titulo">MOLA PATIM FREIO DIANTEIRA/TRASEIRO (MAIOR)220MM VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004674-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011096 ap0005721-0061 sensor pressao ar 0/10 bar 12x1,5 rosca scania genuine parts genuine parts 397946">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011096.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011096</span>
+<div class="preco">R$ 201,78</div>
+<div class="titulo">SENSOR PRESSAO AR 0/10 BAR 12X1,5 ROSCA SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005721-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011098 ap0011208-0061 estrela grade cromada 200mm s/parafuso . mb pesado genuine parts 4068100018">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011098.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011098</span>
+<div class="preco">R$ 187,64</div>
+<div class="titulo">ESTRELA GRADE CROMADA 200MM S/PARAFUSO . MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011208-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011100 ap0011583-0061 mangueira reservatorio d&#x27;agua scania genuine parts 335020 genuine parts 335020">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011100.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011100</span>
+<div class="preco">—</div>
+<div class="titulo">MANGUEIRA RESERVATORIO D&#x27;AGUA SCANIA GENUINE PARTS 335020</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011583-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011102 ap0005021-0061 mangueira turbina 65x75mm silicone azul scania genuine parts genuine parts 375527">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011102.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011102</span>
+<div class="preco">—</div>
+<div class="titulo">MANGUEIRA TURBINA 65X75MM SILICONE AZUL SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005021-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011104 ap0005881-0061 estrela/grade cromada 200mm/c/parafuso uso mb pesado genuine parts 4068100018">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011104.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011104</span>
+<div class="preco">R$ 135,24</div>
+<div class="titulo">ESTRELA/GRADE CROMADA 200MM/C/PARAFUSO USO MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005881-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011105 ap0017091-0061 mangueira cabec.compressor 28x36x85mm si scania 1379888 genuine parts 1379888">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011105.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011105</span>
+<div class="preco">—</div>
+<div class="titulo">MANGUEIRA CABEC.COMPRESSOR 28X36X85MM SI SCANIA 1379888</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017091-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011106 ap0014776-0061 tubo radiador oleo compressor scania genuine parts 1678338 genuine parts 1678338">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011106.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011106</span>
+<div class="preco">—</div>
+<div class="titulo">TUBO RADIADOR OLEO COMPRESSOR SCANIA GENUINE PARTS 1678338</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014776-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011107 ap0018660-0061 alavanca eixo borboleta freio motor orig scania 1328726 genuine parts 1328726">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011107.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011107</span>
+<div class="preco">—</div>
+<div class="titulo">ALAVANCA EIXO BORBOLETA FREIO MOTOR ORIG SCANIA 1328726</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018660-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011116 ap0010096-0061 reparo caneca transf.caixa c/8 marchas c/re scania 1326847 genuine parts 1326847">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011116.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011116</span>
+<div class="preco">—</div>
+<div class="titulo">REPARO CANECA TRANSF.CAIXA C/8 MARCHAS C/RE SCANIA 1326847</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010096-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011117 ap0017377-0061 reparo presilha-can0-turbina (2 canos) scania genuine parts genuine parts 219721x">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011117.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011117</span>
+<div class="preco">—</div>
+<div class="titulo">REPARO PRESILHA-CAN0-TURBINA (2 CANOS) SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017377-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011119 ap0021081-0061 guia valvula admissao escape 24v std ori scania 1403823 genuine parts 1403823">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011119.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011119</span>
+<div class="preco">—</div>
+<div class="titulo">GUIA VALVULA ADMISSAO ESCAPE 24V STD ORI SCANIA 1403823</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021081-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011121 ap0003159-0061 tirante valvula nivel cabine (prisioneiro 1 scania 1386423 genuine parts 1386423">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011121.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011121</span>
+<div class="preco">—</div>
+<div class="titulo">TIRANTE VALVULA NIVEL CABINE (PRISIONEIRO 1 SCANIA 1386423</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003159-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011132 ap0009342-0061 capa aluminio coxim radiador mod. 1ªlinha scania 273792 genuine parts 273792">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011132.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011132</span>
+<div class="preco">—</div>
+<div class="titulo">CAPA ALUMINIO COXIM RADIADOR MOD. 1ªLINHA SCANIA 273792</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009342-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011133 ap0008988-0061 coxim capo scania genuine parts 1424068 genuine parts 1424068">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011133.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011133</span>
+<div class="preco">—</div>
+<div class="titulo">COXIM CAPO SCANIA GENUINE PARTS 1424068</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008988-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011134 ap0003035-0061 coxim tubo escape scania genuine parts 1388070 genuine parts 1388070">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011134.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011134</span>
+<div class="preco">—</div>
+<div class="titulo">COXIM TUBO ESCAPE SCANIA GENUINE PARTS 1388070</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003035-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011138 ap0012022-0061 parafuso alavanca do cambio scania genuine parts 1405406 genuine parts 1405406">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011138.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011138</span>
+<div class="preco">—</div>
+<div class="titulo">PARAFUSO ALAVANCA DO CAMBIO SCANIA GENUINE PARTS 1405406</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012022-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011139 ap0020260-0061 bucha estabilizadora dianteiro volvo genuine parts 1625954 genuine parts 1625954">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011139.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011139</span>
+<div class="preco">—</div>
+<div class="titulo">BUCHA ESTABILIZADORA DIANTEIRO VOLVO GENUINE PARTS 1625954</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020260-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011141 ap5596300-0061 porca eixo piloto cx.camb.60x1.5x75mm aco mb pesado genuine parts 3859900351">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011141.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011141</span>
+<div class="preco">R$ 102,06</div>
+<div class="titulo">PORCA EIXO PILOTO CX.CAMB.60X1.5X75MM ACO MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP5596300-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011143 ap0021082-0061 terminal cachimbo c/rosca (aco) 5mm scania genuine parts genuine parts 76429">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011143.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011143</span>
+<div class="preco">R$ 19,70</div>
+<div class="titulo">TERMINAL CACHIMBO C/ROSCA (ACO) 5MM SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021082-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011146 ap0011708-0061 tomada padronizada alimentacao universal mb pesado genuine parts 0025450826">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011146.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011146</span>
+<div class="preco">R$ 66,57</div>
+<div class="titulo">TOMADA PADRONIZADA ALIMENTACAO UNIVERSAL MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0011708-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011150 ap0016590-0061 rele temporizador/12 volts/5pinos mb pesado genuine parts genuine parts 3845457005">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011150.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011150</span>
+<div class="preco">R$ 113,44</div>
+<div class="titulo">RELE TEMPORIZADOR/12 VOLTS/5PINOS MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016590-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011152 ap0014529-0061 rele auxiliar de partida delco p/28 e 29 mt 2 mb pesado genuine parts 0011524410">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011152.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011152</span>
+<div class="preco">R$ 320,86</div>
+<div class="titulo">RELE AUXILIAR DE PARTIDA DELCO P/28 E 29 MT 2 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014529-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011170 ap0021083-0061 rele temporizador 24v mb pesado genuine parts 3845450205 genuine parts 3845450205">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011170.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011170</span>
+<div class="preco">R$ 105,91</div>
+<div class="titulo">RELE TEMPORIZADOR 24V MB PESADO GENUINE PARTS 3845450205</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021083-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011178 ap0001832-0061 sirene marcha re bivolþ (12/24v) genuine parts 999900999 genuine parts 999900999">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011178.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011178</span>
+<div class="preco">R$ 48,00</div>
+<div class="titulo">SIRENE MARCHA RE BIVOLþ (12/24V) GENUINE PARTS 999900999</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001832-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011183 ap0008087-0061 rele pisca 24v scania genuine parts 1401789 genuine parts 1401789">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011183.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011183</span>
+<div class="preco">R$ 380,58</div>
+<div class="titulo">RELE PISCA 24V SCANIA GENUINE PARTS 1401789</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008087-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011202 ap0017088-0061 porca carcaca roda tra.c/ret(d/i-2&quot;5/8) vw pesado 01925816 genuine parts 01925816">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011202.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011202</span>
+<div class="preco">R$ 161,82</div>
+<div class="titulo">PORCA CARCACA RODA TRA.C/RET(D/I-2&quot;5/8) VW PESADO 01925816</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017088-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011217 ap0008306-0061 tampa(fundo) purif.ar (baixo) 46mm mb pesado genuine parts genuine parts 3440947006">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011217.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011217</span>
+<div class="preco">R$ 159,45</div>
+<div class="titulo">TAMPA(FUNDO) PURIF.AR (BAIXO) 46MM MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008306-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011228 ap0005338-0061 quadro acabamento porta esquerdo mb pesado genuine parts genuine parts 3447277271">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011228.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011228</span>
+<div class="preco">R$ 416,07</div>
+<div class="titulo">QUADRO ACABAMENTO PORTA ESQUERDO MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005338-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011230 ap0002081-0061 mangueira intercooler preta 100x200 br518303 mb pesado genuine parts 9585013382">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011230.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011230</span>
+<div class="preco">R$ 465,66</div>
+<div class="titulo">MANGUEIRA INTERCOOLER PRETA 100X200 BR518303 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002081-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011312 ap0021084-0061 tampa filtro ar-chapa de aco&quot; mb pesado genuine parts genuine parts 0000901012">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011312.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011312</span>
+<div class="preco">R$ 744,80</div>
+<div class="titulo">TAMPA FILTRO AR-CHAPA DE ACO&quot; MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021084-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011328 ap0017511-0061 mangueira bomba reservat-direito hidr.810x30 vw pesado genuine parts tar145743">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011328.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011328</span>
+<div class="preco">R$ 80,89</div>
+<div class="titulo">MANGUEIRA BOMBA RESERVAT-DIREITO HIDR.810X30 VW PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017511-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011341 ap0016178-0061 guia vareta nivel oleo(150mm-16x1.5mm) mb pesado 3760108566 genuine parts 3760108566">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011341.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011341</span>
+<div class="preco">R$ 49,70</div>
+<div class="titulo">GUIA VARETA NIVEL OLEO(150MM-16X1.5MM) MB PESADO 3760108566</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016178-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011342 ap0019693-0061 reparo homocinetico lado roda mb pesado genuine parts genuine parts 6313300185">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011342.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011342</span>
+<div class="preco">R$ 67,72</div>
+<div class="titulo">REPARO HOMOCINETICO LADO RODA MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019693-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011343 ap0019778-0061 anel tubo turbina volvo genuine parts 469509 genuine parts 469509">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011343.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011343</span>
+<div class="preco">R$ 4,19</div>
+<div class="titulo">ANEL TUBO TURBINA VOLVO GENUINE PARTS 469509</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019778-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011350 ap0019606-0061 pino forquilha servo freio(10x30mm) scania genuine parts genuine parts 808214">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011350.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011350</span>
+<div class="preco">R$ 13,55</div>
+<div class="titulo">PINO FORQUILHA SERVO FREIO(10X30MM) SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019606-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011352 ap0002315-0061 algema mola traseira mb pesado genuine parts 3523200163 genuine parts 3523200163">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011352.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011352</span>
+<div class="preco">R$ 341,36</div>
+<div class="titulo">ALGEMA MOLA TRASEIRA MB PESADO GENUINE PARTS 3523200163</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0002315-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011353 ap0019238-0061 flexivel freio ar dt.600mm f/f m18x1,50 volvo genuine parts genuine parts 966566">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011353.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011353</span>
+<div class="preco">R$ 43,66</div>
+<div class="titulo">FLEXIVEL FREIO AR DT.600MM F/F M18X1,50 VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019238-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011360 ap0007256-0061 reparo  compressor el1300/1600 scania genuine parts 522392 genuine parts 522392">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011360.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011360</span>
+<div class="preco">R$ 808,66</div>
+<div class="titulo">REPARO  COMPRESSOR EL1300/1600 SCANIA GENUINE PARTS 522392</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007256-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011370 ap0021085-0061 reparo cabecote compr.(varga)completo 2-cil volvo 6885990 genuine parts 6885990">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011370.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011370</span>
+<div class="preco">R$ 808,66</div>
+<div class="titulo">REPARO CABECOTE COMPR.(VARGA)COMPLETO 2-CIL VOLVO 6885990</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021085-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011402 ap0008072-0061 macaneta interna porta scania genuine parts 356540 genuine parts 356540">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011402.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011402</span>
+<div class="preco">R$ 44,35</div>
+<div class="titulo">MACANETA INTERNA PORTA SCANIA GENUINE PARTS 356540</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008072-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011404 ap0008671-0061 parafuso completo 22x110x1,5mm ch.30 mb pesado genuine parts genuine parts 3814010771">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011404.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011404</span>
+<div class="preco">R$ 48,72</div>
+<div class="titulo">PARAFUSO COMPLETO 22X110X1,5MM CH.30 MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008671-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011413 ap8829397-0061 jg.trava mancal embr.mod.ver br 2416 scania genuine parts genuine parts 1749126">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011413.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011413</span>
+<div class="preco">R$ 198,93</div>
+<div class="titulo">JG.TRAVA MANCAL EMBR.MOD.VER BR 2416 SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP8829397-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011442 ap0005602-0061 volante direcao sprinter mb sprinter genuine parts genuine parts 9014600203">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011442.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011442</span>
+<div class="preco">R$ 850,22</div>
+<div class="titulo">VOLANTE DIRECAO SPRINTER MB SPRINTER GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005602-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011443 ap0010192-0061 suporte filtro diesel(rosca 16x1,5) scania genuine parts genuine parts 1362289">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011443.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011443</span>
+<div class="preco">R$ 318,44</div>
+<div class="titulo">SUPORTE FILTRO DIESEL(ROSCA 16X1,5) SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010192-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011445 ap0003922-0061 tampa filtro oleo original s/furo p/heng mb pesado genuine parts 4571840008">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011445.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011445</span>
+<div class="preco">R$ 197,63</div>
+<div class="titulo">TAMPA FILTRO OLEO ORIGINAL S/FURO P/HENG MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003922-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011498 ap0004811-0061 tirante barra estabilizador dianteiro esquerdo 375mm genuine parts 6343230416">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011498.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011498</span>
+<div class="preco">R$ 664,20</div>
+<div class="titulo">TIRANTE BARRA ESTABILIZADOR DIANTEIRO ESQUERDO 375MM</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004811-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011501 ap0004810-0061 tirante barra estabilizador dianteiro direita 375mm genuine parts 6343230516">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011501.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011501</span>
+<div class="preco">R$ 664,20</div>
+<div class="titulo">TIRANTE BARRA ESTABILIZADOR DIANTEIRO DIREITA 375MM</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004810-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011511 ap0017487-0061 copinho bomba alimentadora(vidro) scania genuine parts genuine parts 192876">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011511.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011511</span>
+<div class="preco">R$ 20,89</div>
+<div class="titulo">COPINHO BOMBA ALIMENTADORA(VIDRO) SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017487-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011513 ap0017418-0061 filtro(peneirinha nylon)b.aliment. scania genuine parts genuine parts 192875">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011513.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011513</span>
+<div class="preco">R$ 6,92</div>
+<div class="titulo">FILTRO(PENEIRINHA NYLON)B.ALIMENT. SCANIA GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017418-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011525 ap0019132-0061 mangueira coletor 80altx101mm interno mb pesado 6645287382 genuine parts 6645287382">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011525.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011525</span>
+<div class="preco">R$ 212,86</div>
+<div class="titulo">MANGUEIRA COLETOR 80ALTX101MM INTERNO MB PESADO 6645287382</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019132-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011542 ap0001802-0061 reparo bomba alim.copo/elem. scania genuine parts 550300 genuine parts 550300">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011542.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011542</span>
+<div class="preco">R$ 33,29</div>
+<div class="titulo">REPARO BOMBA ALIM.COPO/ELEM. SCANIA GENUINE PARTS 550300</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0001802-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011546 ap0013892-0061 rolamento manga pino 35,10/36,10 t138 c/ mb pesado genuine parts 0009813118">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011546.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011546</span>
+<div class="preco">R$ 95,47</div>
+<div class="titulo">ROLAMENTO MANGA PINO 35,10/36,10 T138 C/ MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013892-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011549 ap0012444-0061 rolamento manga eixo 36,10 t144 (36,1x66 mb pesado genuine parts 0009813218">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011549.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011549</span>
+<div class="preco">R$ 68,73</div>
+<div class="titulo">ROLAMENTO MANGA EIXO 36,10 T144 (36,1X66 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012444-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011554 ap0004851-0061 rolamento manga eixo 38,10 t152r mb pesado genuine parts genuine parts 0009818018">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011554.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011554</span>
+<div class="preco">R$ 92,57</div>
+<div class="titulo">ROLAMENTO MANGA EIXO 38,10 T152R MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004851-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011557 ap0013473-0061 bomba alimentadora completa scania genuine parts 207783 genuine parts 207783">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011557.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011557</span>
+<div class="preco">R$ 131,16</div>
+<div class="titulo">BOMBA ALIMENTADORA COMPLETA SCANIA GENUINE PARTS 207783</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013473-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011571 ap0013161-0061 rolamento manga eixo(50mm)de esfera blin mb pesado genuine parts 0019817818">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011571.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011571</span>
+<div class="preco">R$ 115,57</div>
+<div class="titulo">ROLAMENTO MANGA EIXO(50MM)DE ESFERA BLIN MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013161-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011581 ap0012045-0061 valvula dreno automatico scania genuine parts 525749 genuine parts 525749">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011581.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011581</span>
+<div class="preco">R$ 249,50</div>
+<div class="titulo">VALVULA DRENO AUTOMATICO SCANIA GENUINE PARTS 525749</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012045-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011838 ap0009440-0061 valvula dreno automatico vw pesado genuine parts tag607271 genuine parts tag607271">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011838.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011838</span>
+<div class="preco">R$ 249,50</div>
+<div class="titulo">VALVULA DRENO AUTOMATICO VW PESADO GENUINE PARTS TAG607271</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009440-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011897 ap0019350-0061 anel oring bomba dagua 55x3mm volvo genuine parts 925257 genuine parts 925257">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011897.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011897</span>
+<div class="preco">R$ 2,80</div>
+<div class="titulo">ANEL ORING BOMBA DAGUA 55X3MM VOLVO GENUINE PARTS 925257</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019350-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011926 ap0012960-0061 garfo do cardan(alt.51/tubo-3&quot;1/2) mb pesado genuine parts genuine parts 6884110605">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011926.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011926</span>
+<div class="preco">R$ 575,13</div>
+<div class="titulo">GARFO DO CARDAN(ALT.51/TUBO-3&quot;1/2) MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012960-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011928 ap0007299-0061 chave seta vw pesado genuine parts 2tj953513 genuine parts 2tj953513">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011928.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011928</span>
+<div class="preco">R$ 411,45</div>
+<div class="titulo">CHAVE SETA VW PESADO GENUINE PARTS 2TJ953513</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007299-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="011936 ap3982028-0061 sensor velocimetro 24mm pino redondo mb pesado genuine parts genuine parts 0135420217">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/011936.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">011936</span>
+<div class="preco">R$ 438,10</div>
+<div class="titulo">SENSOR VELOCIMETRO 24MM PINO REDONDO MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP3982028-0061</div>
+</div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
+const inp = document.getElementById('q');
+const cards = document.querySelectorAll('.card');
+const stat = document.getElementById('stat');
+const btnTodos = document.getElementById('f-todos');
+const btnReais = document.getElementById('f-reais');
+const btnPlace = document.getElementById('f-place');
+let filtro = 'todos'; // 'todos' | 'reais' | 'placeholders'
+
+function aplicarFiltros() {
+    const q = inp.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(c => {
+        const txt = c.dataset.search;
+        const isPlace = c.classList.contains('placeholder');
+        const passaBusca = !q || txt.includes(q);
+        const passaFiltro = filtro === 'todos' || (filtro === 'reais' && !isPlace) || (filtro === 'placeholders' && isPlace);
+        const show = passaBusca && passaFiltro;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    stat.textContent = visible + ' / ' + cards.length + ' itens';
+}
+
+inp.addEventListener('input', aplicarFiltros);
+
+function setFiltro(novo, btnAtivo) {
+    filtro = novo;
+    [btnTodos, btnReais, btnPlace].forEach(b => b.classList.remove('active'));
+    btnAtivo.classList.add('active');
+    aplicarFiltros();
+}
+btnTodos.addEventListener('click', () => setFiltro('todos', btnTodos));
+btnReais.addEventListener('click', () => setFiltro('reais', btnReais));
+btnPlace.addEventListener('click', () => setFiltro('placeholders', btnPlace));
+</script></body></html>

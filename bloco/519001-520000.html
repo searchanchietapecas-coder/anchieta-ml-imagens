@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Bloco 519001-520000 | Anchieta Pe&ccedil;as ML</title>
+<meta property="og:title" content="Bloco 519001-520000 &middot; Anchieta Pe&ccedil;as">
+<meta property="og:description" content="42 produtos da Fonte BR Company">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #003366; color: white; padding: 1rem 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
+.toolbar { background: white; padding: .75rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar input { padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: .9rem; min-width: 240px; }
+.toolbar .stat { font-size: .85rem; color: #6b7280; }
+.toolbar button { padding: .5rem .85rem; border: 1px solid #d1d5db; border-radius: 6px; background: white; cursor: pointer; font-size: .85rem; transition: all .15s; }
+.toolbar button:hover { background: #f3f4f6; }
+.toolbar button.active { background: #003366; color: white; border-color: #003366; }
+.toolbar button.warn { border-color: #f59e0b; color: #b45309; }
+.toolbar button.warn.active { background: #f59e0b; color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); overflow: hidden; transition: transform .15s, box-shadow .15s; position: relative; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card a { color: inherit; text-decoration: none; display: block; }
+.card.placeholder { border: 2px solid #f59e0b; }
+.card .badge-placeholder { position: absolute; top: 8px; right: 8px; background: #f59e0b; color: white; font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+.thumb { width: 100%; height: 180px; background: #f3f4f6 center / contain no-repeat; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: .8rem; }
+.thumb.placeholder-bg { opacity: .55; filter: grayscale(.4); }
+.no-img { background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px); }
+.body { padding: .75rem; }
+.cod { font-family: monospace; background: #003366; color: white; font-size: .75rem; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.card.placeholder .cod { background: #f59e0b; font-size: 1rem; padding: 5px 10px; font-weight: 700; letter-spacing: .04em; }
+.preco { color: #10b981; font-weight: 600; font-size: 1.05rem; margin: .25rem 0; }
+.titulo { font-size: .85rem; line-height: 1.3; margin: .25rem 0; min-height: 2.4em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.marca { color: #6b7280; font-size: .75rem; }
+.sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
+.card.placeholder .sku { color: #b45309; font-weight: 600; }
+
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
+/* Pagina individual SKU */
+.detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.detail-grid .photos img { width: 100%; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e5e7eb; }
+.detail h2 { margin-top: 0; }
+.detail .preco-big { font-size: 2rem; color: #10b981; font-weight: 700; margin: 1rem 0; }
+.detail .field { margin-bottom: .75rem; }
+.detail .field label { font-size: .8rem; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+.detail .field .val { font-size: .95rem; margin-top: .15rem; }
+.detail pre.desc { background: #f9fafb; padding: 1rem; border-radius: 6px; white-space: pre-wrap; font-family: inherit; font-size: .9rem; line-height: 1.5; border-left: 3px solid #003366; }
+.back { display: inline-block; margin-bottom: 1rem; color: #003366; text-decoration: none; font-size: .9rem; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+</style></head><body>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Bloco 519001-520000 &middot; Anchieta Pe&ccedil;as</h1>
+    <div class="meta"><a href="../index.html" style="color:#cbd5e1;">&larr; voltar ao &iacute;ndice</a> &middot; 42 produtos &middot; 0 com foto real &middot; 42 gen&eacute;ricas</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Bloco 519001-520000
+42 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/519001-520000.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Anchieta bloco 519001&body=Anchieta Peças - Bloco 519001-520000
+42 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/519001-520000.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
+<div class="toolbar">
+<input type="search" id="q" placeholder="Buscar neste bloco...">
+<button id="f-todos" class="active">Todos (42)</button>
+<button id="f-reais">Com foto real (0)</button>
+<button id="f-place" class="warn">S&oacute; gen&eacute;ricas (42)</button>
+<div class="stat" id="stat">42 / 42 itens</div>
+</div>
+<div class="grid">
+<div class="card placeholder" data-search="519003 ap0008784-0061 parafuso sextavado m14x60x1,5 8.8 rp genuine parts 519003 genuine parts 519003">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519003.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519003</span>
+<div class="preco">R$ 7,90</div>
+<div class="titulo">PARAFUSO SEXTAVADO M14X60X1,5 8.8 RP GENUINE PARTS 519003</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0008784-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519022 ap0012385-0061 mangueira radiador volvo genuine parts 20736045 genuine parts 20736045">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519022.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519022</span>
+<div class="preco">R$ 119,84</div>
+<div class="titulo">MANGUEIRA RADIADOR VOLVO GENUINE PARTS 20736045</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012385-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519035 ap0022836-0061 parafuso sextavado c/ flange  m6x42x1,00 8.8 rp 519035 genuine parts 519035">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519035.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519035</span>
+<div class="preco">R$ 0,27</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X42X1,00 8.8 RP 519035</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022836-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519038 ap0007335-0061 mangueira superior radiador mb pesado genuine parts genuine parts 6885012082">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519038.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519038</span>
+<div class="preco">R$ 677,33</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007335-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519051 ap0003184-0061 parafuso sextavado c/ flange  10x38x1,50 10.9 rp 99443210 genuine parts 99443210">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519051.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519051</span>
+<div class="preco">R$ 10,87</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  10X38X1,50 10.9 RP 99443210</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003184-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519054 ap0004182-0061 mangueira superior radiador constellatio vw pesado 2v2121101 genuine parts 2v2121101">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519054.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519054</span>
+<div class="preco">R$ 494,86</div>
+<div class="titulo">MANGUEIRA SUPERIOR RADIADOR CONSTELLATIO VW PESADO 2V2121101</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004182-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519067 ap0020626-0061 parafuso sextavado c/ flange  m6x38x1 8.8 rp genuine parts genuine parts 519067">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519067.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519067</span>
+<div class="preco">R$ 0,24</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X38X1 8.8 RP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020626-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519083 ap0017902-0061 parafuso de roda (recartilhado)  m14x70/75x1,5 10.9 genuine parts 2c241107aa">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519083.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519083</span>
+<div class="preco">R$ 9,15</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO)  M14X70/75X1,5 10.9</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017902-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519099 ap0019370-0061 parafuso de roda (recartilhado)  m18x60/69x1,5 10.9 rp genuine parts 811872">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519099.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519099</span>
+<div class="preco">R$ 15,57</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO)  M18X60/69X1,5 10.9 RP</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019370-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519115 ap0017142-0061 parafuso sextavado m8x40x1,25 8.8 rt mb pesado genuine parts genuine parts 000933008279">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519115.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519115</span>
+<div class="preco">R$ 1,75</div>
+<div class="titulo">PARAFUSO SEXTAVADO M8X40X1,25 8.8 RT MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0017142-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519131 ap0020196-0061 parafuso sextavado c/ flange  m6x22x1,00 8.8 rt 519131 genuine parts 519131">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519131.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519131</span>
+<div class="preco">R$ 0,14</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X22X1,00 8.8 RT 519131</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020196-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519147 ap0020611-0061 parafuso sextavado c/ flange  m6x22x1,00 10.9 rt 519147 genuine parts 519147">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519147.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519147</span>
+<div class="preco">R$ 0,27</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M6X22X1,00 10.9 RT 519147</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020611-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519163 ap0013666-0061 parafuso sextavado m8x90x1,25 8.8 rt genuine parts 519163 genuine parts 519163">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519163.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519163</span>
+<div class="preco">R$ 3,04</div>
+<div class="titulo">PARAFUSO SEXTAVADO M8X90X1,25 8.8 RT GENUINE PARTS 519163</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013666-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519179 ap0005167-0061 parafuso sextavado c/ flange  m14x120x1,5 10.9 80mm 519179 genuine parts 519179">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519179.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519179</span>
+<div class="preco">—</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M14X120X1,5 10.9 80MM 519179</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0005167-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519211 ap0004559-0061 parafuso mola dianteiro parte dianteira m18x160x1,5 10 genuine parts 000000005404">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519211.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519211</span>
+<div class="preco">R$ 70,21</div>
+<div class="titulo">PARAFUSO MOLA DIANTEIRO PARTE DIANTEIRA M18X160X1,5 10</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004559-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519227 ap0009237-0061 parafuso coletor m10x90x1,5 10.9 rp br4010 volvo 21344787 genuine parts 21344787">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519227.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519227</span>
+<div class="preco">R$ 5,51</div>
+<div class="titulo">PARAFUSO COLETOR M10X90X1,5 10.9 RP BR4010 VOLVO 21344787</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009237-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519243 ap2354883-0061 parafuso biela c/ flange m11x1.25x63 vw pesado genuine parts genuine parts 2z0105263">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519243.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519243</span>
+<div class="preco">R$ 26,01</div>
+<div class="titulo">PARAFUSO BIELA C/ FLANGE M11X1.25X63 VW PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2354883-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519259 ap0009841-0061 parafuso sextavado c/ flange m16x120x1,5 10.9 rt mb pesado genuine parts 3273320071">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519259.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519259</span>
+<div class="preco">R$ 32,84</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE M16X120X1,5 10.9 RT MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009841-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519291 ap0007825-0061 parafuso sextavado c/ flange s/furo m16x140x1,5 10.9 genuine parts 3273320171">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519291.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519291</span>
+<div class="preco">R$ 38,36</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE S/FURO M16X140X1,5 10.9</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007825-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519307 ap0012814-0061 parafuso sextavado m12x100x1,5 8.8 rp genuine parts 519307 genuine parts 519307">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519307.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519307</span>
+<div class="preco">R$ 7,40</div>
+<div class="titulo">PARAFUSO SEXTAVADO M12X100X1,5 8.8 RP GENUINE PARTS 519307</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012814-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519323 ap0014621-0061 parafuso sextavado m12x90x1,5 8.8 rp genuine parts 519323 genuine parts 519323">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519323.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519323</span>
+<div class="preco">R$ 7,36</div>
+<div class="titulo">PARAFUSO SEXTAVADO M12X90X1,5 8.8 RP GENUINE PARTS 519323</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014621-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519355 ap0012648-0061 parafuso sextavado m12x80x1,5 8.8 rp genuine parts 519355 genuine parts 519355">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519355.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519355</span>
+<div class="preco">R$ 6,42</div>
+<div class="titulo">PARAFUSO SEXTAVADO M12X80X1,5 8.8 RP GENUINE PARTS 519355</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012648-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519367 ap2223611-0061 paraf sext.flang. m16x1,5x82 10.9 rp volvo genuine parts genuine parts 21344746">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519367.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519367</span>
+<div class="preco">R$ 28,64</div>
+<div class="titulo">PARAF SEXT.FLANG. M16X1,5X82 10.9 RP VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2223611-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519387 ap0022838-0061 parafuso tork c/ flange  m15x210x2,00 rp genuine parts genuine parts 519387">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519387.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519387</span>
+<div class="preco">R$ 27,94</div>
+<div class="titulo">PARAFUSO TORK C/ FLANGE  M15X210X2,00 RP GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0022838-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519467 ap2926135-0061 paraf tork flangeado m10x90x1,5 10.9 mb pesado genuine parts genuine parts 910142010001">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519467.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519467</span>
+<div class="preco">R$ 25,32</div>
+<div class="titulo">PARAF TORK FLANGEADO M10X90X1,5 10.9 MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2926135-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519483 ap0013351-0061 parafuso sextavado c/ flange  m16x130x1,5 10.9 rt mb pesado genuine parts 3273320071">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519483.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519483</span>
+<div class="preco">R$ 33,19</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M16X130X1,5 10.9 RT MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013351-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519499 ap0003929-0061 parafuso sextavado c/ flange  m16x168x2,00 10.9 rp scania genuine parts 346318">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519499.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519499</span>
+<div class="preco">R$ 57,88</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M16X168X2,00 10.9 RP SCANIA</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003929-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519515 ap0020483-0061 parafuso superior alternador 7/16x165 8.8 rp volvo 959807 genuine parts 959807">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519515.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519515</span>
+<div class="preco">R$ 34,09</div>
+<div class="titulo">PARAFUSO SUPERIOR ALTERNADOR 7/16X165 8.8 RP VOLVO 959807</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020483-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519531 ap0010613-0061 parafuso sextavado coletor m10x60x1,5 10.9 rt v mb pesado genuine parts 000933010347">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519531.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519531</span>
+<div class="preco">R$ 4,01</div>
+<div class="titulo">PARAFUSO SEXTAVADO COLETOR M10X60X1,5 10.9 RT V MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010613-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519547 ap0003547-0061 parafuso fixacao coroa ev90/91 m16x2x85mm volvo 1524672 genuine parts 1524672">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519547.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519547</span>
+<div class="preco">R$ 102,47</div>
+<div class="titulo">PARAFUSO FIXACAO COROA EV90/91 M16X2X85MM VOLVO 1524672</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003547-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519563 ap0013686-0061 parafuso sextavado c/ flange  m20x1,5x40 rt 10.9 mb pesado genuine parts 910105020034">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519563.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519563</span>
+<div class="preco">R$ 35,28</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M20X1,5X40 RT 10.9 MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0013686-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519660 ap0007785-0061 parafuso sextavado c/ flange  m12x50x1,5 10.9 rt mb pesado genuine parts 910105012021">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519660.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519660</span>
+<div class="preco">R$ 15,72</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M12X50X1,5 10.9 RT MB PESADO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007785-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519692 ap0007134-0061 parafuso braco suspensao traseiro m18x180x1,5 10.9 r genuine parts 000000000691">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519692.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519692</span>
+<div class="preco">R$ 73,35</div>
+<div class="titulo">PARAFUSO BRACO SUSPENSAO TRASEIRO M18X180X1,5 10.9 R</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0007134-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519708 ap0016091-0061 parafuso allen m10x40x1,5 12.9 rt mb pesado genuine parts genuine parts 000912010220">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519708.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519708</span>
+<div class="preco">R$ 3,38</div>
+<div class="titulo">PARAFUSO ALLEN M10X40X1,5 12.9 RT MB PESADO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0016091-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519756 ap0009941-0061 porca roda c/colar mx22x1,5 alt.27mm ch3 genuine parts genuine parts 41036367">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519756.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519756</span>
+<div class="preco">R$ 15,72</div>
+<div class="titulo">PORCA RODA C/COLAR MX22X1,5 ALT.27MM CH3 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0009941-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519772 ap0010723-0061 parafuso de roda (recartilhado) traseiro  m22x98/106x1,5 1 genuine parts 42117453">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519772.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519772</span>
+<div class="preco">R$ 28,02</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO) TRASEIRO  M22X98/106X1,5 1</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0010723-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519778 ap0012070-0061 parafuso de roda (recartilhado) traseiro completo m22x98/106 genuine parts 42117453">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519778.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519778</span>
+<div class="preco">R$ 47,39</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO) TRASEIRO COMPLETO M22X98/106</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0012070-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519810 ap0003738-0061 parafuso de roda (recartilhado) cpl m22x113,5/124x1,5 volvo genuine parts 20524942">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519810.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519810</span>
+<div class="preco">R$ 59,41</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO) CPL M22X113,5/124X1,5 VOLVO</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0003738-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519826 ap2964839-0061 paraf roda recart.diant. m22x90/98x1,5 10.9 genuine parts genuine parts 42117451">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519826.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519826</span>
+<div class="preco">R$ 18,82</div>
+<div class="titulo">PARAF RODA RECART.DIANT. M22X90/98X1,5 10.9 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP2964839-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519843 ap0014212-0061 parafuso de roda (recartilhado) traseiro completo m22x90/98x genuine parts 42117451">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519843.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519843</span>
+<div class="preco">R$ 38,63</div>
+<div class="titulo">PARAFUSO DE RODA (RECARTILHADO) TRASEIRO COMPLETO M22X90/98X</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0014212-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519859 ap0019455-0061 parafuso sextavado c/ flange m10x30x1,5 8.8 rt ch15 genuine parts 900170010006">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519859.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519859</span>
+<div class="preco">R$ 2,37</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE M10X30X1,5 8.8 RT CH15</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019455-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="519875 ap0018465-0061 parafuso sextavado c/ flange  m20x1,5x285 10.9 rp 519875 genuine parts 519875">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/519875.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">519875</span>
+<div class="preco">R$ 69,78</div>
+<div class="titulo">PARAFUSO SEXTAVADO C/ FLANGE  M20X1,5X285 10.9 RP 519875</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018465-0061</div>
+</div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
+const inp = document.getElementById('q');
+const cards = document.querySelectorAll('.card');
+const stat = document.getElementById('stat');
+const btnTodos = document.getElementById('f-todos');
+const btnReais = document.getElementById('f-reais');
+const btnPlace = document.getElementById('f-place');
+let filtro = 'todos'; // 'todos' | 'reais' | 'placeholders'
+
+function aplicarFiltros() {
+    const q = inp.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(c => {
+        const txt = c.dataset.search;
+        const isPlace = c.classList.contains('placeholder');
+        const passaBusca = !q || txt.includes(q);
+        const passaFiltro = filtro === 'todos' || (filtro === 'reais' && !isPlace) || (filtro === 'placeholders' && isPlace);
+        const show = passaBusca && passaFiltro;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    stat.textContent = visible + ' / ' + cards.length + ' itens';
+}
+
+inp.addEventListener('input', aplicarFiltros);
+
+function setFiltro(novo, btnAtivo) {
+    filtro = novo;
+    [btnTodos, btnReais, btnPlace].forEach(b => b.classList.remove('active'));
+    btnAtivo.classList.add('active');
+    aplicarFiltros();
+}
+btnTodos.addEventListener('click', () => setFiltro('todos', btnTodos));
+btnReais.addEventListener('click', () => setFiltro('reais', btnReais));
+btnPlace.addEventListener('click', () => setFiltro('placeholders', btnPlace));
+</script></body></html>

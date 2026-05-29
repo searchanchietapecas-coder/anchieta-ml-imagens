@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Bloco 079001-080000 | Anchieta Pe&ccedil;as ML</title>
+<meta property="og:title" content="Bloco 079001-080000 &middot; Anchieta Pe&ccedil;as">
+<meta property="og:description" content="20 produtos da Fonte BR Company">
+<meta property="og:image" content="https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg">
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #003366; color: white; padding: 1rem 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+header .meta { font-size: .85rem; opacity: .85; margin-top: .25rem; }
+.toolbar { background: white; padding: .75rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar input { padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: .9rem; min-width: 240px; }
+.toolbar .stat { font-size: .85rem; color: #6b7280; }
+.toolbar button { padding: .5rem .85rem; border: 1px solid #d1d5db; border-radius: 6px; background: white; cursor: pointer; font-size: .85rem; transition: all .15s; }
+.toolbar button:hover { background: #f3f4f6; }
+.toolbar button.active { background: #003366; color: white; border-color: #003366; }
+.toolbar button.warn { border-color: #f59e0b; color: #b45309; }
+.toolbar button.warn.active { background: #f59e0b; color: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; padding: 1.5rem; }
+.card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); overflow: hidden; transition: transform .15s, box-shadow .15s; position: relative; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.card a { color: inherit; text-decoration: none; display: block; }
+.card.placeholder { border: 2px solid #f59e0b; }
+.card .badge-placeholder { position: absolute; top: 8px; right: 8px; background: #f59e0b; color: white; font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .03em; z-index: 2; box-shadow: 0 2px 4px rgba(0,0,0,.2); }
+.thumb { width: 100%; height: 180px; background: #f3f4f6 center / contain no-repeat; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: .8rem; }
+.thumb.placeholder-bg { opacity: .55; filter: grayscale(.4); }
+.no-img { background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px); }
+.body { padding: .75rem; }
+.cod { font-family: monospace; background: #003366; color: white; font-size: .75rem; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+.card.placeholder .cod { background: #f59e0b; font-size: 1rem; padding: 5px 10px; font-weight: 700; letter-spacing: .04em; }
+.preco { color: #10b981; font-weight: 600; font-size: 1.05rem; margin: .25rem 0; }
+.titulo { font-size: .85rem; line-height: 1.3; margin: .25rem 0; min-height: 2.4em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.marca { color: #6b7280; font-size: .75rem; }
+.sku { color: #9ca3af; font-size: .7rem; font-family: monospace; margin-top: .25rem; }
+.card.placeholder .sku { color: #b45309; font-weight: 600; }
+
+/* Botoes de compartilhar */
+.share-bar { display: flex; gap: .5rem; flex-wrap: wrap; }
+.share-bar a, .share-bar button { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem .8rem; border-radius: 6px; font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: all .15s; }
+.share-bar .wa { background: #25d366; color: white; }
+.share-bar .wa:hover { background: #1ebe5b; }
+.share-bar .em { background: #4b5563; color: white; }
+.share-bar .em:hover { background: #374151; }
+.share-bar .cp { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .cp:hover { background: #f3f4f6; }
+.share-bar .cp.copied { background: #10b981; color: white; border-color: #10b981; }
+.share-bar .qr { background: white; color: #003366; border-color: #d1d5db; }
+.share-bar .qr:hover { background: #f3f4f6; }
+
+/* Modal QR */
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal-bg.show { display: flex; }
+.modal { background: white; padding: 1.5rem; border-radius: 12px; max-width: 360px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+.modal img { width: 280px; height: 280px; display: block; margin: 1rem auto; }
+.modal h3 { margin: 0 0 .5rem 0; color: #003366; }
+.modal p { color: #6b7280; font-size: .85rem; margin: .5rem 0; }
+.modal .close { margin-top: 1rem; padding: .5rem 1.5rem; background: #003366; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.modal .url { background: #f3f4f6; padding: .5rem; border-radius: 4px; font-family: monospace; font-size: .75rem; word-break: break-all; margin: .5rem 0; }
+
+/* Pagina individual SKU */
+.detail { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.detail-grid .photos img { width: 100%; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e5e7eb; }
+.detail h2 { margin-top: 0; }
+.detail .preco-big { font-size: 2rem; color: #10b981; font-weight: 700; margin: 1rem 0; }
+.detail .field { margin-bottom: .75rem; }
+.detail .field label { font-size: .8rem; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+.detail .field .val { font-size: .95rem; margin-top: .15rem; }
+.detail pre.desc { background: #f9fafb; padding: 1rem; border-radius: 6px; white-space: pre-wrap; font-family: inherit; font-size: .9rem; line-height: 1.5; border-left: 3px solid #003366; }
+.back { display: inline-block; margin-bottom: 1rem; color: #003366; text-decoration: none; font-size: .9rem; }
+.back:hover { text-decoration: underline; }
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+</style></head><body>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <h1>Bloco 079001-080000 &middot; Anchieta Pe&ccedil;as</h1>
+    <div class="meta"><a href="../index.html" style="color:#cbd5e1;">&larr; voltar ao &iacute;ndice</a> &middot; 20 produtos &middot; 0 com foto real &middot; 20 gen&eacute;ricas</div>
+  </div>
+  <div class="share-bar">
+    <a class="wa" href="https://wa.me/?text=Anchieta Peças - Bloco 079001-080000
+20 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/079001-080000.html" target="_blank">&#128172; WhatsApp</a>
+    <a class="em" href="mailto:?subject=Anchieta bloco 079001&body=Anchieta Peças - Bloco 079001-080000
+20 produtos
+https://searchanchietapecas-coder.github.io/anchieta-ml-imagens/bloco/079001-080000.html">&#9993; Email</a>
+    <button class="cp" onclick="copiarLink(this)">&#128203; Copiar link</button>
+    <button class="qr" onclick="mostrarQR()">&#128241; QR Code</button>
+  </div>
+</div>
+</header>
+<div class="toolbar">
+<input type="search" id="q" placeholder="Buscar neste bloco...">
+<button id="f-todos" class="active">Todos (20)</button>
+<button id="f-reais">Com foto real (0)</button>
+<button id="f-place" class="warn">S&oacute; gen&eacute;ricas (20)</button>
+<div class="stat" id="stat">20 / 20 itens</div>
+</div>
+<div class="grid">
+<div class="card placeholder" data-search="079002 ap0004756-0061 mangueira inferior radiador sem bocal genuine parts genuine parts 504011594">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079002.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079002</span>
+<div class="preco">R$ 489,09</div>
+<div class="titulo">MANGUEIRA INFERIOR RADIADOR SEM BOCAL GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0004756-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079085 ap0020614-0061 trava 9x3,5x0,7mm vw pesado genuine parts n0124342 genuine parts n0124342">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079085.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079085</span>
+<div class="preco">R$ 0,10</div>
+<div class="titulo">TRAVA 9X3,5X0,7MM VW PESADO GENUINE PARTS N0124342</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0020614-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079107 ap0021105-0061 bucha do rolamento volante do motor do b genuine parts 79107 genuine parts 79107">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079107.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079107</span>
+<div class="preco">R$ 66,82</div>
+<div class="titulo">BUCHA DO ROLAMENTO VOLANTE DO MOTOR DO B GENUINE PARTS 79107</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021105-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079108 ap0021106-0061 rolamento agulha hk1010 genuine parts genuine parts hk1010">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079108.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079108</span>
+<div class="preco">R$ 9,32</div>
+<div class="titulo">ROLAMENTO AGULHA HK1010 GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021106-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079109 ap0021107-0061 anel oring 55x2mm viton verde genuine parts 79109 genuine parts 79109">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079109.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079109</span>
+<div class="preco">R$ 12,57</div>
+<div class="titulo">ANEL ORING 55X2MM VITON VERDE GENUINE PARTS 79109</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021107-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079111 ap0019696-0061 rolamento 6200z genuine parts genuine parts 6200z">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079111.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079111</span>
+<div class="preco">R$ 12,43</div>
+<div class="titulo">ROLAMENTO 6200Z GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019696-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079114 ap0018806-0061 porca especial scania genuine parts 1867375 genuine parts 1867375">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079114.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079114</span>
+<div class="preco">R$ 62,80</div>
+<div class="titulo">PORCA ESPECIAL SCANIA GENUINE PARTS 1867375</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018806-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079117 ap0021108-0061 retentor da bomba combustivel genuine parts 079117 genuine parts 079117">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079117.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079117</span>
+<div class="preco">R$ 23,75</div>
+<div class="titulo">RETENTOR DA BOMBA COMBUSTIVEL GENUINE PARTS 079117</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021108-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079118 ap0021109-0061 retentor bomba combustivel 10x27x6.7mm genuine parts 79118 genuine parts 79118">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079118.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079118</span>
+<div class="preco">R$ 14,99</div>
+<div class="titulo">RETENTOR BOMBA COMBUSTIVEL 10X27X6.7MM GENUINE PARTS 79118</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021109-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079142 ap0021110-0061 plastico do br 521835 genuine parts 79142 genuine parts 79142">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079142.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079142</span>
+<div class="preco">—</div>
+<div class="titulo">PLASTICO DO BR 521835 GENUINE PARTS 79142</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021110-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079161 ap0021111-0061 anel oring 8x1,5mm nbr genuine parts 79161 genuine parts 79161">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079161.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079161</span>
+<div class="preco">R$ 0,41</div>
+<div class="titulo">ANEL ORING 8X1,5MM NBR GENUINE PARTS 79161</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021111-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079179 ap6023436-0061 caneca borracha bomba arla mb 1016 815 2548ls 2651ls 1719 genuine parts 0001421089">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079179.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079179</span>
+<div class="preco">R$ 44,76</div>
+<div class="titulo">CANECA BORRACHA BOMBA ARLA MB 1016 815 2548LS 2651LS 1719</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP6023436-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079188 ap0019985-0061 anel oring 3,30x1,5mm nbr genuine parts 79188 genuine parts 79188">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079188.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079188</span>
+<div class="preco">R$ 0,31</div>
+<div class="titulo">ANEL ORING 3,30X1,5MM NBR GENUINE PARTS 79188</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0019985-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079198 ap0018075-0061 bucha nylon articulacao cabine vm volvo genuine parts genuine parts 20753485">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079198.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079198</span>
+<div class="preco">R$ 36,81</div>
+<div class="titulo">BUCHA NYLON ARTICULACAO CABINE VM VOLVO GENUINE PARTS</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0018075-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079501 ap0021112-0061 arruela funileiro 13,5x19x0,5mm genuine parts 079501 genuine parts 079501">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079501.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079501</span>
+<div class="preco">R$ 12,02</div>
+<div class="titulo">ARRUELA FUNILEIRO 13,5X19X0,5MM GENUINE PARTS 079501</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021112-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079781 ap0021113-0061 bucha aluminio do br 680 genuine parts 079781 genuine parts 079781">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079781.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079781</span>
+<div class="preco">R$ 63,64</div>
+<div class="titulo">BUCHA ALUMINIO DO BR 680 GENUINE PARTS 079781</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021113-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079782 ap0021114-0061 pino do br 680 genuine parts 079782 genuine parts 079782">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079782.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079782</span>
+<div class="preco">R$ 18,83</div>
+<div class="titulo">PINO DO BR 680 GENUINE PARTS 079782</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021114-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079783 ap0021115-0061 arruela do br 680 genuine parts 079783 genuine parts 079783">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079783.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079783</span>
+<div class="preco">R$ 10,83</div>
+<div class="titulo">ARRUELA DO BR 680 GENUINE PARTS 079783</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021115-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079785 ap0021116-0061 gaxeta pistao top brake (vitom)br 522962 genuine parts 79785 genuine parts 79785">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079785.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079785</span>
+<div class="preco">R$ 29,34</div>
+<div class="titulo">GAXETA PISTAO TOP BRAKE (VITOM)BR 522962 GENUINE PARTS 79785</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021116-0061</div>
+</div></a></div>
+<div class="card placeholder" data-search="079790 ap0021117-0061 prisioneiro do br 523592 8,0x53,0mm genuine parts 79790 genuine parts 79790">
+<span class="badge-placeholder">GEN&Eacute;RICA</span><a href="../sku/079790.html"><div class="thumb placeholder-bg" style="background-image: url(https://d3mi7368052s1h.cloudfront.net/Custom/Content/Products/10/27/1027673_reparo-suporte-dianttras-moto-66824-htz5_z1_637617829397689481.jpg);"></div>
+<div class="body">
+<span class="cod">079790</span>
+<div class="preco">R$ 12,12</div>
+<div class="titulo">PRISIONEIRO DO BR 523592 8,0X53,0MM GENUINE PARTS 79790</div>
+<div class="marca">GENUINE PARTS</div>
+<div class="sku">AP0021117-0061</div>
+</div></a></div></div>
+
+<div class="modal-bg" id="qr-modal" onclick="if(event.target===this)fecharQR()">
+  <div class="modal">
+    <h3>Compartilhar via QR Code</h3>
+    <p>Aponte a c&acirc;mera do celular para abrir.</p>
+    <img id="qr-img" alt="QR code">
+    <div class="url" id="qr-url"></div>
+    <button class="close" onclick="fecharQR()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function copiarLink(btn, url) {
+    const u = url || window.location.href;
+    navigator.clipboard.writeText(u).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '&#10004; Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+    });
+}
+function mostrarQR(url) {
+    const u = encodeURIComponent(url || window.location.href);
+    const img = document.getElementById('qr-img');
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + u;
+    document.getElementById('qr-url').textContent = url || window.location.href;
+    document.getElementById('qr-modal').classList.add('show');
+}
+function fecharQR() {
+    document.getElementById('qr-modal').classList.remove('show');
+}
+
+const inp = document.getElementById('q');
+const cards = document.querySelectorAll('.card');
+const stat = document.getElementById('stat');
+const btnTodos = document.getElementById('f-todos');
+const btnReais = document.getElementById('f-reais');
+const btnPlace = document.getElementById('f-place');
+let filtro = 'todos'; // 'todos' | 'reais' | 'placeholders'
+
+function aplicarFiltros() {
+    const q = inp.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(c => {
+        const txt = c.dataset.search;
+        const isPlace = c.classList.contains('placeholder');
+        const passaBusca = !q || txt.includes(q);
+        const passaFiltro = filtro === 'todos' || (filtro === 'reais' && !isPlace) || (filtro === 'placeholders' && isPlace);
+        const show = passaBusca && passaFiltro;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    stat.textContent = visible + ' / ' + cards.length + ' itens';
+}
+
+inp.addEventListener('input', aplicarFiltros);
+
+function setFiltro(novo, btnAtivo) {
+    filtro = novo;
+    [btnTodos, btnReais, btnPlace].forEach(b => b.classList.remove('active'));
+    btnAtivo.classList.add('active');
+    aplicarFiltros();
+}
+btnTodos.addEventListener('click', () => setFiltro('todos', btnTodos));
+btnReais.addEventListener('click', () => setFiltro('reais', btnReais));
+btnPlace.addEventListener('click', () => setFiltro('placeholders', btnPlace));
+</script></body></html>
